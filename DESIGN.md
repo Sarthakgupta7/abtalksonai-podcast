@@ -1,0 +1,3 @@
+# Podcast studio
+
+Near-black navy surfaces and burnt-orange highlights, inspired by the supplied Trainplex reference. Light copy, Manrope body type, and Barlow Condensed display type. Spacious hero with a particle microphone, concentric audio rings and a real featured episode thumbnail. Flat episode gallery, compact topic chips, inline search and a native video dialog. A restrained orange microphone mascot follows the pointer and responds to a press. Scroll progress, readable word highlights, subtle image drift and a title-to-conversation strike-through scene add motion. Reduced motion shows the complete scene with no movement.
