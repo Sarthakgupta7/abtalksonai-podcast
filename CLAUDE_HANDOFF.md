@@ -66,3 +66,7 @@ The existing private Sites project ID is in .openai/hosting.json. Preserve it an
 The real logo from the guest invitation is now in `public/assets/abtalksonai-logo.png`. Visual identity is warm gold, ivory and dark studio tones. `src/components/experience.tsx` holds the scroll and cursor effects. The mascot uses a global passive pointer listener and transforms pointer coordinates into SVG space, with spring pupils and listener cleanup.
 
 Publication currently cannot proceed because the Sites connector returns `project_not_found` for the preserved project ID. The local site and production build remain usable. Do not silently create a replacement project.
+
+## Active hosting
+
+The rich-theme version is now deployed at https://abtalksonai-podcast.vercel.app in the existing Vercel workspace. Source is in the private GitHub repository https://github.com/Sarthakgupta7/abtalksonai-podcast. The legacy Sites project remains inaccessible. The GitHub-to-Vercel automatic deployment integration has not been enabled.

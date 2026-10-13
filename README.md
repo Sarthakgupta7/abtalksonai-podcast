@@ -2,6 +2,10 @@
 
 A separate podcast website for ABTalksOnAI, hosted by Anil Bajpai. Built with React, TypeScript, Vite, Tailwind CSS and Motion.
 
+Live website: https://abtalksonai-podcast.vercel.app
+
+Source: https://github.com/Sarthakgupta7/abtalksonai-podcast
+
 ## Development
 
 ```sh
