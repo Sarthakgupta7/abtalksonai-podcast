@@ -29,3 +29,6 @@ Episodes are the product. Human conversations lead the imagery. Motion must serv
 
 ## Accessibility & Inclusion
 Keyboard navigation, readable contrast, native dialogs, visible focus, responsive layout and reduced-motion support. Canvas art is decorative and never required to read or navigate.
+
+## Revision, 13 October 2026
+The user rejected the first visual design and supplied Anil Bajpai's LinkedIn profile. The revision uses his real 800-pixel profile portrait, downloaded from the profile photo viewer, and his self-reported enterprise experience and agentic AI focus. The photograph retains its identity; grayscale is a CSS presentation treatment. Employer endorsements and audience counts are not implied. Source: https://www.linkedin.com/in/anil-bajpai/ (read in Chrome on 13 October 2026).
