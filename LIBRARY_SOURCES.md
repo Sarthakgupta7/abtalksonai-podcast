@@ -24,3 +24,11 @@ Guest portraits are shown through CSS viewports of the user's existing guest col
 - `public/assets/abtalksonai-logo.png`: original embedded logo, extracted with its PDF alpha mask from the user-supplied `/Users/sarthak/Downloads/ABTalks_Guest_Invitation_SARAH.pdf`. It has not been redrawn or reworded.
 - `src/components/experience.tsx`: custom Motion components for spring cursor gaze, scroll word opacity, image parallax and page progress. Pointer coordinates are mapped through the SVG inverse screen matrix so rotation and responsive scaling do not offset the gaze.
 - Motion direction also references animations.dev, easing.dev and the supplied StringTune examples. No paid course content or library code is copied.
+
+## Latest content update
+
+- Ankita is selected as the latest conversation and listed first, verified against the official channel upload order on 13 October 2026. https://www.youtube.com/@ABTalksOnAI/videos
+- Navisha's portrait uses the original guest board's middle column, second row. Her full podcast audio and duration are sourced from the official show RSS feed, https://anchor.fm/s/10a76dd14/podcast/rss. Her career webinar is not substituted for the podcast.
+- Magic UI Shine Border source: https://magicui.design/r/shine-border.json, adapted through a gold palette and a reduced-motion fallback. The open-source Magic UI component is integrated; its premium blocks are not. https://github.com/magicuidesign/magicui
+- Emil Kowalski's skill is already installed and applied: https://github.com/emilkowalski/skills/tree/main/skills/emil-design-eng
+- 21st.dev, Originkit and MotionSites are reviewed design resources. Originkit requires sign-in for source delivery, so no authenticated component code is imported. No paid prompt or component purchase was made.
