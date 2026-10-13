@@ -176,3 +176,32 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 .interaction-credit{display:block;margin-top:8px;font-size:10px;line-height:1.6;opacity:.75}
 @media(hover:none){.skiper-link>svg{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.skiper-link::before,.skiper-link>svg{transition:none;transform:none}.skiper-link::before{opacity:0}.skiper-link:hover::before,.skiper-link:focus-visible::before{opacity:1}}
+
+/* Editorial motion: a short ladder reveal, responsive light and tactile controls. */
+[data-entrance]{transition:opacity 520ms var(--ease),translate 620ms var(--ease);transition-delay:var(--entrance-delay,0ms)}
+[data-entrance=pending]{opacity:0;translate:0 26px}
+[data-entrance=visible]{opacity:1;translate:0 0}
+.episode-row{position:relative;isolation:isolate}
+.episode-row::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(260px circle at var(--pointer-x,50%) var(--pointer-y,50%),#d6b77716,transparent 75%);opacity:0;transition:opacity 220ms var(--ease)}
+.action-button[data-slot=button]{isolation:isolate;overflow:hidden;translate:var(--magnet-x,0px) var(--magnet-y,0px);transition:translate 180ms var(--ease),background-color 180ms var(--ease),box-shadow 180ms var(--ease),scale 120ms var(--ease)}
+.action-button[data-slot=button]::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(90px circle at var(--pointer-x,50%) var(--pointer-y,50%),#fff8dc66,transparent 75%);opacity:0;transition:opacity 180ms var(--ease);z-index:-1}
+.action-button[data-slot=button]:active{scale:.97}
+.action-button>svg:last-child,.episode-arrow>svg,.nav-youtube>svg:last-child{transition:transform 220ms var(--ease)}
+.featured-cover{transform-style:preserve-3d;transition:transform 450ms var(--ease),box-shadow 450ms var(--ease)}
+.featured-cover::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(240px circle at var(--pointer-x,50%) var(--pointer-y,50%),#ffe8ac24,transparent 80%);opacity:0;transition:opacity 220ms var(--ease);z-index:1}
+.guest-tile .card-glint{background:radial-gradient(210px circle at var(--pointer-x,50%) var(--pointer-y,50%),#fff1ca2b,transparent 75%)}
+.episode-thumb img,.episode-thumb .portrait{transition:transform 450ms var(--ease),filter 450ms var(--ease)}
+.search-box{transition:border-color 160ms var(--ease),box-shadow 160ms var(--ease)}
+.search-box:focus-within{border-color:#d6b777;box-shadow:0 0 0 3px #d6b77715}
+.site-nav nav a{position:relative}.site-nav nav a::after{content:'';position:absolute;bottom:5px;left:0;right:0;height:1px;background:#d6b777;transform:scaleX(0);transform-origin:left;transition:transform 200ms var(--ease)}
+.site-nav nav a:focus-visible::after{transform:scaleX(1)}
+@media(hover:hover) and (pointer:fine){
+ .episode-row[data-pointer=active]::before,.featured-cover[data-pointer=active]::after,.action-button[data-pointer=active]::after{opacity:1}
+ .featured-cover:hover{transform:perspective(1200px) rotateX(2deg) rotateY(-3deg) translateY(-3px);box-shadow:12px 20px 45px #0005}
+ .episode-row:hover .episode-thumb img,.episode-row:hover .episode-thumb .portrait{transform:scale(1.045)}
+ .episode-row:hover .episode-arrow>svg,.action-button:hover>svg:last-child,.nav-youtube:hover>svg:last-child{transform:translate(2px,-2px)}
+ .action-button:hover{box-shadow:0 8px 24px #d6b77720}
+ .site-nav nav a:hover::after{transform:scaleX(1)}
+}
+@media(max-width:760px){[data-entrance=pending]{translate:0 14px}[data-entrance]{transition-duration:380ms,450ms}.action-button:active::after{opacity:.55}}
+@media(prefers-reduced-motion:reduce){[data-entrance]{opacity:1!important;translate:none!important;transition:none!important}.featured-cover,.action-button[data-slot=button]{transform:none!important;translate:none!important}.episode-thumb img,.episode-thumb .portrait{transform:none!important}.action-button>svg:last-child,.episode-arrow>svg,.nav-youtube>svg:last-child{transform:none!important}.episode-row::before,.featured-cover::after,.action-button::after{display:none}}

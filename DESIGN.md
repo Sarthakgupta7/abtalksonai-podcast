@@ -78,3 +78,6 @@ Run TypeScript checking, production build and diff checks after implementation c
 
 ## Interaction refinement
 The latest episode uses ThreeUI Community's circular glass play button, adapted to champagne. Guest cards have a restrained pointer perspective and glint on desktop, while phone cards remain stable. Motion Primitives powers the bottom dock's active-section highlight. Card labels, playback and native anchor navigation remain fully usable with the effects disabled. Skiper UI supplies the host and footer animated links, with visible attribution. Animmaster Lib is a visual reference pending access to its paid source pack. Actual integrations are recorded in LIBRARY_SOURCES.md.
+
+## Motion refinement, 13 October 2026
+Entrance reveals use a short 65ms ladder across episode rows and guest cards, capped at 195ms. IntersectionObserver reveals each item once; keyboard focus reveals content immediately. Desktop pointers add moving champagne highlights, a 3px maximum magnetic button offset, guest perspective and a featured-cover lift. Parallax uses a damped spring. Touch layouts use shorter 14px entrances and press feedback. Reduced motion makes all entrance content visible and disables spatial effects. No extra animation dependency is introduced.

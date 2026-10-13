@@ -3,7 +3,7 @@ import {motion,useMotionValue,useReducedMotion,useScroll,useSpring,useTransform,
 
 export function ScrollProgress(){const {scrollYProgress}=useScroll();return <motion.div className="reading-progress" style={{scaleX:scrollYProgress}} aria-hidden="true"/>}
 export function Parallax({children,className='',distance=40}:{children:ReactNode;className?:string;distance?:number}){
- const ref=useRef<HTMLDivElement>(null);const reduced=useReducedMotion();const {scrollYProgress}=useScroll({target:ref,offset:['start end','end start']});const y=useTransform(scrollYProgress,[0,1],[distance,-distance]);
+ const ref=useRef<HTMLDivElement>(null);const reduced=useReducedMotion();const {scrollYProgress}=useScroll({target:ref,offset:['start end','end start']});const targetY=useTransform(scrollYProgress,[0,1],[distance,-distance]);const y=useSpring(targetY,{stiffness:140,damping:30,mass:.4});
  return <div ref={ref} className={`parallax-frame ${className}`}><motion.div className="parallax-content" style={{y:reduced?0:y}}>{children}</motion.div></div>
 }
 function ScrollWord({word,index,total,progress}:{word:string;index:number;total:number;progress:MotionValue<number>}){const reduced=useReducedMotion();const opacity=useTransform(progress,[index/total,(index+1)/total],[.18,1]);return <motion.span style={{opacity:reduced?1:opacity}}>{word}{' '}</motion.span>}

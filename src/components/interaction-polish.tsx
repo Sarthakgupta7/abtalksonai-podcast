@@ -9,7 +9,7 @@ export function DepthCard({children,...props}:Omit<ComponentProps<typeof motion.
  const rx=useSpring(x,{stiffness:260,damping:26});const ry=useSpring(y,{stiffness:260,damping:26});
  return <motion.button {...props} style={{rotateX:reduced?0:rx,rotateY:reduced?0:ry,transformPerspective:900}} onPointerMove={e=>{
   if(reduced||e.pointerType==='touch'||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
-  const r=e.currentTarget.getBoundingClientRect();x.set(-(e.clientY-r.top-r.height/2)/r.height*9);y.set((e.clientX-r.left-r.width/2)/r.width*9);
+  const r=e.currentTarget.getBoundingClientRect();e.currentTarget.style.setProperty("--pointer-x",`${e.clientX-r.left}px`);e.currentTarget.style.setProperty("--pointer-y",`${e.clientY-r.top}px`);x.set(-(e.clientY-r.top-r.height/2)/r.height*9);y.set((e.clientX-r.left-r.width/2)/r.width*9);
  }} onPointerLeave={()=>{x.set(0);y.set(0)}} onBlur={()=>{x.set(0);y.set(0)}}>{children}<span className="card-glint" aria-hidden="true"/></motion.button>;
 }
 
