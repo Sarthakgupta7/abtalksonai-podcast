@@ -1,3 +1,16 @@
-# ABTalksOnAI, conversations with real people
+# ABTalksOnAI, a conversation destination
 
-The previous illustration-led layout was rejected by the user. This revision puts Anil's real LinkedIn portrait at the center of the homepage and host section. The original navy and orange identity remains, with Sora display typography and Manrope body type. Navigation becomes a simple horizontal masthead. Body copy and controls are larger. Episode tiles use two columns with wider images. The host section contains a real photograph and a concise biography grounded in his supplied LinkedIn profile. A small mascot remains at the guest invitation, while particle-microphone artwork and generic name graphics are removed. Word reveals, photograph drift, title strike-through, responsive navigation, topic search and actual episode playback remain.
+The research-approved direction places the show and its guests before the host biography. The signature is a five-person guest fan: real portraits, slight physical offsets, hover/focus emphasis and direct episode access. On phones it becomes an ordinary swipeable rail with visible names and controls. Deep black-cherry backgrounds, coral-red marks and warm-white type draw from the user's cinematic podcast references. Archivo carries the display type; Manrope carries controls and body copy.
+
+The progression is: show opening and guest fan, featured conversation, searchable episode archive, guest portraits, Anil's introduction, guest invitation, and follow links. The library uses compact media rows rather than a repeated feature-card grid. Real library components power filters, primary actions, annotations and episode view selection. Native dialogs preserve browser focus handling. All motion respects reduced-motion preferences.
+
+No metrics, testimonials, partnerships, or endorsement claims are invented. The host's experience remains explicitly attributed to his LinkedIn profile.
+
+## October refinement
+
+Use the supplied white microphone logo with a near-black studio background, warm ivory type and gold `#edb951` accents. Larger opening typography, concentric background arcs and staggered monochrome portrait compositions establish the podcast identity.
+
+Motion: staggered hero opacity entrance, actual intersection-based section reveals, progress-based word reveals, restrained portrait parallax, active guest color and spring microphone pupils. Keep the browser's native scrolling. Reduced motion disables parallax and reveals; cursor gaze uses direct motion values. Cursor interaction must never prevent playback or keyboard browsing.
+
+## Rich theme
+Charcoal `#10100f`, champagne `#d6b777`, warm ivory, and Instrument Serif for the hero, show statement and invitation. Preserve Archivo for browsing headings and Manrope for controls. Use restrained metallic gradients on primary buttons, a dark invitation panel and gold microphone.

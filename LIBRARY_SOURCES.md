@@ -1,0 +1,26 @@
+# UI component provenance
+
+The frontend now uses React, Vite, Tailwind CSS and Motion.
+
+## Integrated source components
+
+- Arc UI Chip Group and foundation/motion tokens: https://uiarc.dev/components/chip-group . Source installed from the public free registry at https://uiarc.dev/r/chip-group.json and its declared dependencies. Used for topic filters.
+- Skecher UI Velocity Tabs: https://skecher-ui.com/docs/velocity-tabs . Source from https://github.com/CoDesign-Spa27/skecher-ui/blob/main/components/ui-components/velocity-tabs.tsx . Used for episode watch/about selection.
+- Space UI Button and Spinner: https://www.spaceui.one/docs/installation . Source installed from the public registry at https://www.spaceui.one/r/primitives-button.json . Used for primary actions.
+- Componentry Annotated Text: https://componentry.dev/ . Public source at https://componentry.dev/r/annotated-text.json . Used for the hero underline and host copy annotation.
+
+## Visual references, without proprietary source
+
+Planes photo stack/carousel interaction patterns inform the custom guest fan. The reviewed Planes photo stack is Pro, so its proprietary source is not included and no license was purchased. https://useplanes.com/components/photo-stack
+
+The wider composition draws on the supplied Raj Shamani tribute site, Prakhar unaffiliated site, All Things WTF, BeerBiceps, Seen and Unseen, Indian Noir, Kevin Surace and Trainplex. Their content and images are not reused.
+
+## Image provenance
+
+Guest portraits are shown through CSS viewports of the user's existing guest collateral image. The source collage is preserved intact. Anil's portrait was downloaded from the supplied LinkedIn profile on 13 October 2026. Episode thumbnails are from the official ABTalksOnAI YouTube channel. No people or claims were synthesized.
+
+## Brand and motion refinement
+
+- `public/assets/abtalksonai-logo.png`: original embedded logo, extracted with its PDF alpha mask from the user-supplied `/Users/sarthak/Downloads/ABTalks_Guest_Invitation_SARAH.pdf`. It has not been redrawn or reworded.
+- `src/components/experience.tsx`: custom Motion components for spring cursor gaze, scroll word opacity, image parallax and page progress. Pointer coordinates are mapped through the SVG inverse screen matrix so rotation and responsive scaling do not offset the gaze.
+- Motion direction also references animations.dev, easing.dev and the supplied StringTune examples. No paid course content or library code is copied.

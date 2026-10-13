@@ -32,3 +32,6 @@ Keyboard navigation, readable contrast, native dialogs, visible focus, responsiv
 
 ## Revision, 13 October 2026
 The user rejected the first visual design and supplied Anil Bajpai's LinkedIn profile. The revision uses his real 800-pixel profile portrait, downloaded from the profile photo viewer, and his self-reported enterprise experience and agentic AI focus. The photograph retains its identity; grayscale is a CSS presentation treatment. Employer endorsements and audience counts are not implied. Source: https://www.linkedin.com/in/anil-bajpai/ (read in Chrome on 13 October 2026).
+
+## Research-approved rebuild
+The user approved applying the podcast-site research and requested a changed website. React migration enables integrating real source components from Arc UI, Skecher UI, Space UI and Componentry. Planes contributes interaction inspiration for a custom guest fan; no paid code is included. See LIBRARY_SOURCES.md.
