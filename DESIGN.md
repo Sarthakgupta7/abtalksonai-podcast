@@ -75,3 +75,6 @@ Uiverse, mapcn, Kitbitz and 3dicons may be useful for future needs. Maps and ill
 ## Delivery checks
 
 Run TypeScript checking, production build and diff checks after implementation changes. Inspect the actual phone and desktop UI. Check episode playback, guest links, navigation and console errors. Preserve `vercel.json` redirects for old platform routes. Record copied-source provenance in `LIBRARY_SOURCES.md`. Push and deploy implementation changes under the user's existing authorization; documentation-only changes do not need a production deployment.
+
+## Interaction refinement
+The latest episode uses ThreeUI Community's circular glass play button, adapted to champagne. Guest cards have a restrained pointer perspective and glint on desktop, while phone cards remain stable. Motion Primitives powers the bottom dock's active-section highlight. Card labels, playback and native anchor navigation remain fully usable with the effects disabled. Actual integrations and possible Skiper UI/Animata name matches are recorded in LIBRARY_SOURCES.md.
