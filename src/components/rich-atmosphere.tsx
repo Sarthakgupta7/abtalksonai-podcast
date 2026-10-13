@@ -33,7 +33,7 @@ export function useGlassNavigation(){
   // Refraction on desktop; the engine's lighter frosted backend on touch devices.
   import('@surdeddd/liquidglass').then(({attach})=>{
    if(disposed)return;
-   const desktop=matchMedia('(hover:hover) and (pointer:fine)').matches;
+   const desktop=matchMedia('(min-width:761px) and (hover:hover) and (pointer:fine)').matches;
    document.querySelectorAll<HTMLElement>('.nav-glass-surface,.phone-dock').forEach(el=>{
     handles.push(attach(el,{preset:'frosted',backend:desktop?'css-svg':'css-fallback',tint:'#15120e',tintOpacity:.78,blur:18,refraction:10,dispersion:.08,radius:24,physics:false,motionLight:false,adaptive:false,quality:{mapSide:64,maxDpr:1,caPasses:1}}));
    });
