@@ -81,3 +81,6 @@ The latest episode uses ThreeUI Community's circular glass play button, adapted 
 
 ## Motion refinement, 13 October 2026
 Entrance reveals use a short 65ms ladder across episode rows and guest cards, capped at 195ms. IntersectionObserver reveals each item once; keyboard focus reveals content immediately. Desktop pointers add moving champagne highlights, a 3px maximum magnetic button offset, guest perspective and a featured-cover lift. Parallax uses a damped spring. Touch layouts use shorter 14px entrances and press feedback. Reduced motion makes all entrance content visible and disables spatial effects. No extra animation dependency is introduced.
+
+## Story and campus content
+The story uses a four-chapter horizontal rail driven by vertical scroll on screens at least 900px wide. Decorative numbers and orbit lines move at different speeds to create horizontal parallax. Smaller screens use native swipe and scroll snap; reduced motion uses a static grid. The story is grounded in pages 3 to 5 of the supplied story PDF. The campus section paraphrases the workshop invitation's outcomes, 60 to 90 minute format and team contact. Community counts, hiring totals, employer titles and superlative growth claims are intentionally omitted because they are unverified or inconsistent across the documents. Historical abtalks.in platform links are updated to app.klymb.ai.

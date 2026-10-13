@@ -5,7 +5,7 @@ export function useMotionDirection(){
  useEffect(()=>{
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const fine=matchMedia('(hover: hover) and (pointer: fine)');
-  const selector='.hero-topic,.hero-intro,.hero-actions,.library-heading,.library-controls,.episode-row,.guest-tile,.invite-inner>div,.footer-top';
+  const selector='.hero-topic,.hero-intro,.hero-actions,.library-heading,.library-controls,.episode-row,.guest-tile,.invite-inner>div,.footer-top,.campus-intro,.campus-outcomes li';
   const observed=new Set<HTMLElement>();
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
    if(entry.isIntersecting){(entry.target as HTMLElement).dataset.entrance='visible';observer.unobserve(entry.target)}
@@ -15,7 +15,7 @@ export function useMotionDirection(){
     if(observed.has(el))return;
     observed.add(el);
     const siblings=el.parentElement?[...el.parentElement.children]:[];
-    const index=el.matches('.episode-row,.guest-tile')?siblings.indexOf(el):el.matches('.hero-intro')?1:el.matches('.hero-actions')?2:0;
+    const index=el.matches('.episode-row,.guest-tile,.campus-outcomes li')?siblings.indexOf(el):el.matches('.hero-intro')?1:el.matches('.hero-actions')?2:0;
     el.style.setProperty('--entrance-delay',`${Math.min(index,3)*65}ms`);
     el.dataset.entrance=reduced.matches?'visible':'pending';
     if(!reduced.matches)observer.observe(el);

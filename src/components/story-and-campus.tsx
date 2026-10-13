@@ -1,0 +1,36 @@
+import {useEffect,useRef,useState} from 'react';
+import {motion,useReducedMotion,useScroll,useSpring,useTransform} from 'motion/react';
+import {ArrowRight,ArrowUpRight,AudioLines,Code2,GraduationCap,MessageCircle} from 'lucide-react';
+
+const chapters=[
+ {number:'01',label:'The beginning',title:'It started with a conversation.',text:'Anil brought CIOs, CTOs and AI leaders to the podcast to explore what transformation looks like inside real organisations.',Icon:AudioLines,note:'Listen. Question. Learn.'},
+ {number:'02',label:'The question',title:'What does capability look like?',text:'Industry leaders were looking for AI talent they could trust. Students wanted to know what to learn and build to become that talent.',Icon:MessageCircle,note:'Industry insight meets student ambition.'},
+ {number:'03',label:'The response',title:'Build it. Show your work.',text:'A 60-day challenge turned learning into public evidence: useful projects, daily GitHub commits and progress shared on LinkedIn.',Icon:Code2,note:'Projects that people can inspect.'},
+ {number:'04',label:'Beyond the microphone',title:'Take the conversation to campus.',text:'Workshops, challenges and ViCodathon connect ideas from industry with practical student action. The platform now lives at app.klymb.ai.',Icon:GraduationCap,note:'From a good question to a useful next step.'},
+];
+export function StoryJourney(){
+ const section=useRef<HTMLElement>(null),viewport=useRef<HTMLDivElement>(null),track=useRef<HTMLDivElement>(null);
+ const reduced=useReducedMotion();const[desktop,setDesktop]=useState(false),[travel,setTravel]=useState(0);
+ useEffect(()=>{const mq=matchMedia('(min-width: 900px)');const update=()=>setDesktop(mq.matches);update();mq.addEventListener('change',update);return()=>mq.removeEventListener('change',update)},[]);
+ useEffect(()=>{const measure=()=>setTravel(Math.max(0,(track.current?.scrollWidth||0)-(viewport.current?.clientWidth||0)));const observer=new ResizeObserver(measure);if(track.current)observer.observe(track.current);if(viewport.current)observer.observe(viewport.current);measure();return()=>observer.disconnect()},[]);
+ const {scrollYProgress}=useScroll({target:section,offset:['start 96px','end end']});
+ const artX=useTransform(scrollYProgress,[0,1],[28,-28]);const orbitX=useTransform(scrollYProgress,[0,1],[-18,18]);
+ const target=useTransform(scrollYProgress,[0,1],[0,-travel]);const x=useSpring(target,{stiffness:180,damping:35,mass:.4});
+ const enabled=desktop&&!reduced;
+ return <section ref={section} id="story" className={`story-journey ${enabled?'story-scroll':'story-static'}`} aria-labelledby="story-title">
+  <div className="story-pin"><div className="story-heading page-wrap"><div><span className="section-kicker">The story so far</span><h2 id="story-title">One conversation.<br/><em>A world of possibilities.</em></h2></div><p>The questions did not stop at the microphone.<br/>They became a reason to build together.</p></div>
+   <div ref={viewport} className="story-viewport" tabIndex={enabled?undefined:0} aria-label={enabled?'Four chapters in the ABTalksOnAI story':'Swipe or use arrow keys to explore four chapters in the ABTalksOnAI story'}>
+    <motion.div ref={track} className="story-track" style={{x:enabled?x:0}}>{chapters.map(({number,label,title,text,Icon,note})=><article className="story-chapter" key={number}>
+     <div className="chapter-top"><span>{label}</span><span>{number} / 04</span></div><div className="chapter-art" aria-hidden="true"><motion.span className="chapter-orbit" style={{x:enabled?orbitX:0}}/><span className="chapter-orbit orbit-two"/><Icon strokeWidth={1}/><motion.span className="chapter-number" style={{x:enabled?artX:0}}>{number}</motion.span></div>
+     <h3>{title}</h3><p>{text}</p><div className="chapter-note"><span className="record-dot"/>{note}</div>
+    </article>)}</motion.div>
+   </div><div className="story-bottom page-wrap"><span>{enabled?'Scroll to follow the story':'Swipe to follow the story'} <ArrowRight size={15}/></span><a className="quiet-link" href="https://app.klymb.ai/" target="_blank" rel="noopener">Explore the community platform <ArrowUpRight size={16}/></a></div>
+  </div>
+ </section>;
+}
+const outcomes=[['Industry reality','Understand changing roles and what employers value.'],['Choose a useful project','Use an AI project selection checklist to identify relevant problems.'],['See AI in action','Explore a live workflow connecting information, decisions and action.'],['Make capability visible','Use projects, documentation and public proof to demonstrate your work.'],['Plan the next step','Match a target AI role with the project and skills to build next.']];
+export function CampusWorkshop(){
+ return <section className="campus-section page-wrap" id="campus" aria-labelledby="campus-title"><div className="campus-intro"><span className="section-kicker">From industry insight to student action</span><h2 id="campus-title">Bring the conversation<br/><em>to your campus.</em></h2><p>A practical AI workshop led by Anil Bajpai, founder of ABTalksOnAI. Connect employer expectations, useful projects and evidence-based hiring with your students’ next steps.</p><div className="campus-details"><span>60 to 90 minutes</span><span>Tailored to branch, year and AI exposure</span></div><a className="action-button campus-contact" href="mailto:team@abtalks.in?subject=Campus%20AI%20workshop%20enquiry">Plan a campus workshop <ArrowUpRight size={17}/></a><small>Share your preferred date, student profile and audience size.</small></div>
+  <div className="campus-outcomes"><span className="section-kicker">What students take away</span><ol>{outcomes.map(([title,text],i)=><li key={title}><span className="outcome-number">0{i+1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol><p className="campus-host-note">Designed for colleges, universities, placement cells, innovation clubs and technical societies. An auditorium or seminar hall, projector, audio, internet and a campus coordinator make it easy to host.</p></div>
+ </section>;
+}
