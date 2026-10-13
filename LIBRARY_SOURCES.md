@@ -32,3 +32,10 @@ Guest portraits are shown through CSS viewports of the user's existing guest col
 - Magic UI Shine Border source: https://magicui.design/r/shine-border.json, adapted through a gold palette and a reduced-motion fallback. The open-source Magic UI component is integrated; its premium blocks are not. https://github.com/magicuidesign/magicui
 - Emil Kowalski's skill is already installed and applied: https://github.com/emilkowalski/skills/tree/main/skills/emil-design-eng
 - 21st.dev, Originkit and MotionSites are reviewed design resources. Originkit requires sign-in for source delivery, so no authenticated component code is imported. No paid prompt or component purchase was made.
+
+## Gold and glass enhancement
+- ShaderGradient: https://github.com/ruucm/shadergradient (MIT), actual lazy-loaded React renderer with React Three Fiber v9.
+- React Three Fiber: https://github.com/pmndrs/react-three-fiber (MIT), used by ShaderGradient.
+- LiquidGlassJS: https://github.com/Surdeddd/liquidglassjs (MIT), actual navigation material engine; refraction on pointer devices, CSS fallback on touch devices, no spring movement on navigation.
+- Liquid Logo: https://github.com/collidingScopes/liquid-logo, visual reference only. The implemented CSS highlight masks the original logo artwork, with no copied shader code and no alteration to the logo asset.
+- Rendering pauses by unmounting the hero canvas outside the viewport or while the page is hidden. Reduced motion and Save Data use the static gold fallback. Phone pixel density is capped at 0.65.

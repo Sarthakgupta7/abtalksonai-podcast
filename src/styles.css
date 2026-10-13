@@ -134,3 +134,21 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 
 @media(max-width:760px){.fan-card,.featured-art,.featured-copy,.guest-section-heading,.host-picture,.host-copy{opacity:1!important}.featured-art,.featured-copy,.guest-section-heading,.host-picture,.host-copy{transform:none!important}}
 .guest-search input::-webkit-search-cancel-button{display:none}
+
+/* Gold water, restrained refraction, and an original-logo metallic highlight. */
+.rich-atmosphere{position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:#15120e}
+.gold-fallback{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 25%,#97713855,transparent 55%),radial-gradient(ellipse at 15% 75%,#b8914335,transparent 50%)}
+.gold-shader{position:absolute;inset:-12% -5%;opacity:.65;animation:atmosphere-arrive 1.2s ease-out both}
+.atmosphere-vignette{position:absolute;inset:0;background:linear-gradient(180deg,#15120e25 0%,#15120e45 30%,#15120e55 65%,#15120e 100%),radial-gradient(ellipse at 50% 25%,#15120e60,transparent 75%)}
+.atmosphere-grain{position:absolute;inset:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.6' filter='url(%23n)'/%3E%3C/svg%3E")}
+.site-nav{isolation:isolate;background:transparent;backdrop-filter:none;border-bottom:0;padding-block:18px}
+.nav-glass-surface{position:absolute;inset:8px max(20px,calc((100vw - 1210px)/2));z-index:-1;border:1px solid #ead3a333;border-radius:24px;background:#15120ed9;backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 #fff4df18,0 8px 32px #0003;pointer-events:none}
+.site-nav>a,.site-nav>nav,.site-nav>button{position:relative}
+.site-nav nav a{transition:color .18s ease-out}.nav-youtube{background:#d6b7770a;border-color:#d6b77735;border-radius:12px}
+.liquid-logo{position:relative;display:block;width:174px}.liquid-logo img{width:100%!important}
+.logo-metal{position:absolute;inset:0;pointer-events:none;opacity:.42;mask:url('/assets/abtalksonai-logo.png') center/contain no-repeat;-webkit-mask:url('/assets/abtalksonai-logo.png') center/contain no-repeat;background:linear-gradient(115deg,transparent 15%,#e7b96722 28%,#fff5d3 33%,#a1732722 38%,transparent 45%,#ffdc9222 66%,#fff6dc 72%,transparent 80%);background-size:300% 200%;animation:liquid-metal-flow 12s linear infinite;mix-blend-mode:screen}
+@keyframes liquid-metal-flow{0%{background-position:100% 0%}50%{background-position:0% 100%}100%{background-position:100% 0%}}
+@keyframes atmosphere-arrive{from{opacity:0}to{opacity:.65}}
+@media(max-width:760px){.site-nav{padding:12px 24px;min-height:82px}.nav-glass-surface{inset:6px 12px;border-radius:20px}.site-nav .liquid-logo{width:145px}.site-nav nav.open{top:82px;background:#1b1915fa;border:1px solid #d6b77735;border-radius:16px;margin:0 12px;width:calc(100% - 24px)}.gold-shader{opacity:.5}.phone-dock{left:12px;right:12px;bottom:calc(8px + env(safe-area-inset-bottom,0px));border:1px solid #ead3a333;border-radius:22px;padding:7px 10px;background:#171612e8;box-shadow:inset 0 1px 0 #fff4df18,0 8px 24px #0006}.phone-dock a{border-radius:14px}.footer-top .liquid-logo{width:190px}}
+@media(prefers-reduced-motion:reduce){.logo-metal{animation:none;background-position:45% 0%;opacity:.2}.gold-shader{animation:none}}
+@media(prefers-reduced-transparency:reduce){.nav-glass-surface,.phone-dock{background:#171612!important;backdrop-filter:none!important}}
