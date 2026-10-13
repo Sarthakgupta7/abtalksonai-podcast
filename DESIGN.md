@@ -14,3 +14,6 @@ Motion: staggered hero opacity entrance, actual intersection-based section revea
 
 ## Rich theme
 Charcoal `#10100f`, champagne `#d6b777`, warm ivory, and Instrument Serif for the hero, show statement and invitation. Preserve Archivo for browsing headings and Manrope for controls. Use restrained metallic gradients on primary buttons, a dark invitation panel and gold microphone.
+
+## Phone and complete guest directory
+Phone layouts use readable 16px body copy, full-width latest-episode CTA, a swipeable portrait rail with visible names, 44px minimum navigation controls and a safe-area-aware bottom dock. Guest names sit in a searchable, expandable directory rather than a phone-sized wall of tiny portraits. The directory contains 49 guests verified from official descriptions and original episode covers; provenance and unresolved unnamed entries are recorded in GUEST_SOURCES.md. Preserve desktop composition. Mobile section reveals do not gate content visibility.
