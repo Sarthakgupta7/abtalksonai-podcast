@@ -75,3 +75,5 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 @media(prefers-reduced-motion:reduce){.featured-shine{animation:none!important}}
 
 .player-dialog,.guest-dialog{margin:auto}
+
+:root{scroll-padding-top:145px}@media(max-width:760px){:root{scroll-padding-top:110px}}
