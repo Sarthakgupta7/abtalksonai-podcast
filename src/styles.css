@@ -223,3 +223,25 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 @media(min-width:900px) and (max-height:760px){.story-pin{padding-top:22px}.story-heading{margin-bottom:20px}.story-heading h2{font-size:34px}.chapter-art{height:66px;margin-block:8px}.story-chapter{padding:18px 24px}.story-chapter h3{font-size:27px}.chapter-note{margin-top:14px;padding-top:12px}}
 @media(prefers-reduced-motion:reduce){.story-journey{height:auto}.story-pin{position:static!important}.story-viewport{overflow:visible!important}.story-track{width:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));transform:none!important;padding-inline:max(52px,calc((100vw - 1136px)/2))}.story-chapter{width:auto;max-width:none}.story-bottom>span{display:none}}
 @media(prefers-reduced-motion:reduce) and (max-width:899px){.story-track{grid-template-columns:1fr;padding-inline:24px}}
+
+/* Portraits: consistent headroom, shoulder crop and a separate editorial caption. */
+.guest-fan{gap:16px;max-width:1080px;padding-top:24px;padding-bottom:32px}
+.fan-card{width:180px;height:258px;border-radius:12px;border-color:#d6b77740;background:#161410;box-shadow:0 12px 30px #0003}
+.fan-image{inset:10px 8px 65px;height:auto;width:auto;border-radius:7px;overflow:hidden;background:#050505}
+.fan-image .parallax-content{height:100%;margin-top:0}
+.fan-image .portrait{filter:grayscale(.35);background-color:#050505}
+.fan-image .portrait-sprite{background-size:428.6% 481.7%}
+.fan-image .portrait-pranav{background-position:7.96% 15.49%}
+.fan-image .portrait-kevin{background-position:46.91% 15.49%}
+.fan-image .portrait-malpani{background-position:86.14% 15.49%}
+.fan-image .portrait-navisha{background-position:46.91% 58.17%}
+.host-card .fan-image img{object-fit:cover;object-position:50% 22%}
+.fan-overlay{inset:auto 0 0;height:80px;background:linear-gradient(transparent,#161410 22%);z-index:1}
+.fan-caption{left:14px;right:12px;bottom:14px;z-index:2}
+.fan-caption strong{font-size:13px;line-height:1.3}.fan-caption small{font-size:9px;margin-top:5px;color:#c9bc9e}
+.fan-play{top:15px;right:14px;z-index:3;background:#161410b8;backdrop-filter:blur(5px)}
+.guest-image{inset:10px 10px 72px;height:auto;width:auto;border-radius:5px;background:#050505}
+.guest-image .parallax-content{height:100%;margin-top:0}.guest-image .portrait{filter:grayscale(.35)}
+.guest-tile-caption{padding-top:18px;background:linear-gradient(transparent,#171510 28%)}
+@media(hover:hover) and (pointer:fine){.fan-card:hover .portrait,.fan-card.focused .portrait{filter:grayscale(0)}.fan-card:hover{box-shadow:0 18px 40px #0005}}
+@media(max-width:760px){.guest-fan{gap:14px;padding:16px 22px 28px}.fan-card{width:174px;height:258px}.fan-caption strong{font-size:14px}.fan-caption small{font-size:10px}.fan-image .portrait,.guest-image .portrait{filter:none}.guest-image{inset:7px 7px 72px}.guest-tile{min-height:250px}.guest-tile-caption{bottom:13px}}
