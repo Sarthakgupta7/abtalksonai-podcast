@@ -39,3 +39,6 @@ Guest portraits are shown through CSS viewports of the user's existing guest col
 - LiquidGlassJS: https://github.com/Surdeddd/liquidglassjs (MIT), actual navigation material engine; refraction on pointer devices, CSS fallback on touch devices, no spring movement on navigation.
 - Liquid Logo: https://github.com/collidingScopes/liquid-logo, visual reference only. The implemented CSS highlight masks the original logo artwork, with no copied shader code and no alteration to the logo asset.
 - Rendering pauses by unmounting the hero canvas outside the viewport or while the page is hidden. Reduced motion and Save Data use the static gold fallback. Phone pixel density is capped at 0.65.
+
+## Additional resource review, 13 October 2026
+The user supplied a broader inspiration and component list. Official sites reviewed: Minimal Gallery (https://minimal.gallery/), Component Gallery (https://component.gallery/), 21st.dev (https://21st.dev/), shadcn/ui (https://ui.shadcn.com/), Aceternity UI (https://ui.aceternity.com/), Magic UI (https://magicui.design/) and Anime.js (https://animejs.com/). These are references, not newly integrated components. Motion Primitives (https://motion-primitives.com/) returned 403 during this review. The intended usage and unresolved product names are recorded in DESIGN.md. No paid templates, prompts or source licenses were purchased.
