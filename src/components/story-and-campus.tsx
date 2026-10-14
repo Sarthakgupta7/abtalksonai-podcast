@@ -6,7 +6,7 @@ const chapters=[
  {number:'01',label:'The beginning',title:'It started with a conversation.',text:'Anil brought CIOs, CTOs and AI leaders to the podcast to explore what transformation looks like inside real organisations.',Icon:AudioLines,note:'Listen. Question. Learn.'},
  {number:'02',label:'The question',title:'What does capability look like?',text:'Industry leaders were looking for AI talent they could trust. Students wanted to know what to learn and build to become that talent.',Icon:MessageCircle,note:'Industry insight meets student ambition.'},
  {number:'03',label:'The response',title:'Build it. Show your work.',text:'A 60-day challenge turned learning into public evidence: useful projects, daily GitHub commits and progress shared on LinkedIn.',Icon:Code2,note:'Projects that people can inspect.'},
- {number:'04',label:'Beyond the microphone',title:'Take the conversation to campus.',text:'Workshops, challenges and ViCodathon connect ideas from industry with practical student action. The platform now lives at app.klymb.ai.',Icon:GraduationCap,note:'From a good question to a useful next step.'},
+ {number:'04',label:'Beyond the microphone',title:'Take the conversation to campus.',text:'Workshops, challenges and ViCodathon connect ideas from industry with practical student action.',Icon:GraduationCap,note:'From a good question to a useful next step.'},
 ];
 export function StoryJourney(){
  const section=useRef<HTMLElement>(null),viewport=useRef<HTMLDivElement>(null),track=useRef<HTMLDivElement>(null);
