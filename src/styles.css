@@ -166,17 +166,6 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 @media(max-width:760px){.featured-threeui-play.circle-buttons{width:72px;height:72px}.featured-threeui-play .circle-button{width:58px}.guest-tile-caption,.guest-tile-arrow{transform:none}.guest-tile:active{border-color:#d6b77788}.dock-label{gap:7px}}
 @media(prefers-reduced-motion:reduce){.guest-tile,.directory-list>li,.directory-person strong,.card-glint{transition:none}.featured-threeui-play .circle-button__aura{animation:none!important}}
 
-/* Skiper 40 Link001: champagne underline and directional arrow. */
-.skiper-link{position:relative;display:inline-flex;align-items:center;gap:.55em;width:fit-content;max-width:100%;padding-block:.3em}
-.skiper-link::before{content:'';position:absolute;pointer-events:none;bottom:0;left:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform 300ms cubic-bezier(.4,0,.2,1)}
-.skiper-link>svg{width:.65em;height:.65em;flex-shrink:0;opacity:0;transform:translateY(4px);transition:transform 300ms cubic-bezier(.4,0,.2,1),opacity 200ms ease}
-.skiper-link:hover::before,.skiper-link:focus-visible::before{transform:scaleX(1);transform-origin:left}
-.skiper-link:hover>svg,.skiper-link:focus-visible>svg{opacity:1;transform:translateY(0)}
-.skiper-link:focus-visible{outline:2px solid var(--gold,#edb951);outline-offset:6px;border-radius:2px}
-.interaction-credit{display:block;margin-top:8px;font-size:10px;line-height:1.6;opacity:.75}
-@media(hover:none){.skiper-link>svg{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){.skiper-link::before,.skiper-link>svg{transition:none;transform:none}.skiper-link::before{opacity:0}.skiper-link:hover::before,.skiper-link:focus-visible::before{opacity:1}}
-
 /* Editorial motion: a short ladder reveal, responsive light and tactile controls. */
 [data-entrance]{transition:opacity 520ms var(--ease),translate 620ms var(--ease);transition-delay:var(--entrance-delay,0ms)}
 [data-entrance=pending]{opacity:0;translate:0 26px}
@@ -245,3 +234,5 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 .guest-tile-caption{padding-top:18px;background:linear-gradient(transparent,#171510 28%)}
 @media(hover:hover) and (pointer:fine){.fan-card:hover .portrait,.fan-card.focused .portrait{filter:grayscale(0)}.fan-card:hover{box-shadow:0 18px 40px #0005}}
 @media(max-width:760px){.guest-fan{gap:14px;padding:16px 22px 28px}.fan-card{width:174px;height:258px}.fan-caption strong{font-size:14px}.fan-caption small{font-size:10px}.fan-image .portrait,.guest-image .portrait{filter:none}.guest-image{inset:7px 7px 72px}.guest-tile{min-height:250px}.guest-tile-caption{bottom:13px}}
+
+.footer-top>div a{display:flex;align-items:center;gap:8px;min-height:36px;transition:color 160ms ease}.footer-top>div a:hover,.footer-top>div a:focus-visible{color:var(--primary)}
