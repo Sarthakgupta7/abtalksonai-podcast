@@ -274,3 +274,6 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 @media(max-width:760px){.host-section{grid-template-columns:1fr;padding-block:65px;gap:35px}.host-picture{height:auto;aspect-ratio:4/5}.host-name{font-size:60px}.host-curiosity{font-size:36px}.host-copy>p{font-size:16px;line-height:1.8}.portrait-topline{font-size:9px;left:20px}.portrait-caption{left:22px;right:22px}.portrait-colour-hint{left:22px;font-size:11px}.portrait-caption strong{font-size:35px}.story-chapter-nav{gap:12px}.story-chapter-nav button{font-size:10px;padding-top:5px}.hero-intro{line-height:1.65}}
 @media(hover:none){.pointer-hint{display:none}.touch-hint{display:inline}}
 @media(prefers-reduced-motion:reduce){.host-portrait-image .host-colour{transition:none}.story-chapter-nav i::after{transition:none}}
+
+.guest-tile .guest-image{bottom:97px}.guest-tile-caption .guest-company{display:block;margin-top:5px;color:#d6b777;font-size:12px;line-height:1.4;font-weight:600}.guest-tile-caption small{margin-top:5px}.guest-tile{min-height:310px}
+@media(max-width:760px){.guest-tile{min-height:285px}.guest-tile .guest-image{bottom:105px}.guest-tile-caption .guest-company{font-size:11px;line-height:1.4}.guest-tile-caption strong{font-size:13px}.guest-tile-caption small{font-size:10px}}
