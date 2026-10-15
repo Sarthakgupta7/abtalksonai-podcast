@@ -243,13 +243,14 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 @media(max-width:760px){.campus-gallery{gap:26px;grid-template-columns:1fr;margin-top:0}.campus-gallery-heading{display:block}.campus-gallery-heading h3{font-size:34px}.campus-gallery-heading p{margin-top:16px;font-size:15px}.campus-photo-wide img{aspect-ratio:1.65}.campus-photo figcaption{font-size:13px}.campus-photo figcaption span{font-size:11px}}
 
 /* Complete portrait framing and monochrome-to-colour photo interaction. */
-.chapter-art{height:160px}.chapter-photo>img{filter:grayscale(1);transition:filter 280ms var(--ease)}
+.chapter-art{height:160px}.chapter-photo>img{filter:none}
 .story-chapter:first-child .chapter-photo>img{object-fit:cover;object-position:center 8%;width:100%;left:0;transform:none!important}
 .chapter-photo .chapter-number{display:none}
-.host-picture img,.campus-photo img{filter:grayscale(1);transition:filter 280ms var(--ease)}
-.chapter-photo:focus-visible>img,.host-picture:focus-within img,.campus-photo:focus-visible img{filter:grayscale(0)}
+.host-picture img{filter:grayscale(1);transition:filter 280ms var(--ease)}
+.campus-photo img{filter:none}
+.host-picture:focus-within img{filter:grayscale(0)}
 .chapter-photo:focus-visible,.campus-photo:focus-visible{outline:2px solid var(--primary);outline-offset:5px}
-@media(hover:hover) and (pointer:fine){.story-chapter:hover .chapter-photo>img,.host-picture:hover img,.campus-photo:hover img{filter:grayscale(0)}}
+@media(hover:hover) and (pointer:fine){.host-picture:hover img{filter:grayscale(0)}}
 @media(max-width:899px){.chapter-art{height:180px}}
 @media(min-width:900px) and (max-height:760px){.chapter-art{height:140px}}
-@media(hover:none){.chapter-photo:active>img,.campus-photo:active img,.host-picture:active img{filter:grayscale(0)}}
+@media(hover:none){.host-picture:active img{filter:grayscale(0)}}
