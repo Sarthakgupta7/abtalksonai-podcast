@@ -90,3 +90,6 @@ Host portrait is a native toggle button, with monochrome and colour layers and a
 
 ## Reversible editorial version
 The cream and navy reference is implemented at /editorial. The original rich website remains at /. Both versions use the same verified episode catalogue and shared player, while the editorial design has scoped CSS. It preserves company and workshop facts and avoids unsupported newsletter subscriptions, subscriber counts, specific course tracks or curriculum claims from the visual reference. The two explicit Vercel rewrites serve the editorial page without changing platform redirects. Original rich version checkpoint: commit 8f9fefa.
+
+## Editorial motion pass
+The /editorial version uses line-by-line hero entrances, one-time staggered reveals, 14px spring photo parallax, restrained pointer perspective on episode and workshop cards, short button light feedback, a shared filter highlight and a 200ms challenge-tab entrance. Desktop hover effects are gated to fine pointers. Keyboard focus immediately reveals content. Reduced motion removes spatial movement and makes entrance content visible. No animation dependencies are added; the original homepage motion remains unchanged.
