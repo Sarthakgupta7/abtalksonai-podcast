@@ -11,3 +11,5 @@ The campus invitation's embedded Im19 (auditorium audience), Im111 (Anil at the 
 
 ## Featured guest companies
 Company labels checked 15 October 2026. Kevin Surace: Appvance.ai, https://appvance.ai/leadership. Pranav Pai: 3one4 Capital, https://www.3one4capital.com/team/pranav-pai and user's profile screenshot. Aniruddha Malpani: Malpani Ventures, https://www.malpaniventures.com/team. Navisha Prabhakar: Google Cloud, her own announcement https://www.linkedin.com/posts/navisha-prabhakar-81ba485a_i-am-delighted-to-share-that-i-have-started-activity-7451157766603452416-5MNY. Labels identify affiliations, not employer endorsement. No job titles are added.
+
+Navisha's company display label was updated to Google following the user's supplied LinkedIn profile text, which lists Google as the company and Google Cloud in her headline.
