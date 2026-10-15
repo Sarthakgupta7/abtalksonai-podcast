@@ -87,3 +87,6 @@ The story uses a four-chapter horizontal rail driven by vertical scroll on scree
 
 ## Editorial polish, 15 October 2026
 Host portrait is a native toggle button, with monochrome and colour layers and a 650ms reveal on desktop hover or keyboard focus. On touch, tapping toggles colour. Only the main host portrait receives this treatment. Portrait framing keeps the face visible; name and identity sit below it. Host headings use a serif name and a compact sans-serif second line, with 15px desktop and 16px phone body copy. Four direct chapter buttons supplement the story's scroll interaction and show the current chapter.
+
+## Reversible editorial version
+The cream and navy reference is implemented at /editorial. The original rich website remains at /. Both versions use the same verified episode catalogue and shared player, while the editorial design has scoped CSS. It preserves company and workshop facts and avoids unsupported newsletter subscriptions, subscriber counts, specific course tracks or curriculum claims from the visual reference. The two explicit Vercel rewrites serve the editorial page without changing platform redirects. Original rich version checkpoint: commit 8f9fefa.
