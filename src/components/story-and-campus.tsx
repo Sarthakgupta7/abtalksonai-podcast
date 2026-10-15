@@ -1,5 +1,5 @@
 import {useEffect,useRef,useState} from 'react';
-import {motion,useReducedMotion,useScroll,useSpring,useTransform} from 'motion/react';
+import {motion,useReducedMotion,useScroll,useSpring,useTransform,useMotionValueEvent} from 'motion/react';
 import {ArrowRight,ArrowUpRight,AudioLines,Code2,GraduationCap,MessageCircle} from 'lucide-react';
 
 const chapters=[
@@ -16,15 +16,19 @@ export function StoryJourney(){
  const {scrollYProgress}=useScroll({target:section,offset:['start 96px','end end']});
  const artX=useTransform(scrollYProgress,[0,1],[28,-28]);const orbitX=useTransform(scrollYProgress,[0,1],[-18,18]);
  const target=useTransform(scrollYProgress,[0,1],[0,-travel]);const x=useSpring(target,{stiffness:180,damping:35,mass:.4});
- const enabled=desktop&&!reduced;
+ const enabled=desktop&&!reduced;const[chapter,setChapter]=useState(0);
+ useEffect(()=>{if(enabled&&viewport.current)viewport.current.scrollLeft=0},[enabled]);
+ useMotionValueEvent(scrollYProgress,'change',value=>{if(enabled)setChapter(Math.min(3,Math.max(0,Math.round(value*3))))});
+ function goToChapter(index:number){setChapter(index);if(enabled&&section.current){const el=section.current;const top=window.scrollY+el.getBoundingClientRect().top-96;window.scrollTo({top:top+(el.offsetHeight-window.innerHeight+96)*index/3,behavior:'smooth'})}else if(viewport.current){viewport.current.scrollTo({left:travel*index/3,behavior:reduced?'instant':'smooth'})}}
+
  return <section ref={section} id="story" className={`story-journey ${enabled?'story-scroll':'story-static'}`} aria-labelledby="story-title">
   <div className="story-pin"><div className="story-heading page-wrap"><div><span className="section-kicker">The story so far</span><h2 id="story-title">One conversation.<br/><em>A world of possibilities.</em></h2></div><p>The questions did not stop at the microphone.<br/>They became a reason to build together.</p></div>
-   <div ref={viewport} className="story-viewport" tabIndex={enabled?undefined:0} aria-label={enabled?'Four chapters in the ABTalksOnAI story':'Swipe or use arrow keys to explore four chapters in the ABTalksOnAI story'}>
+   <div ref={viewport} onScroll={e=>{if(!enabled&&travel)setChapter(Math.min(3,Math.round(e.currentTarget.scrollLeft/travel*3)))}} className="story-viewport" tabIndex={enabled?undefined:0} aria-label={enabled?'Four chapters in the ABTalksOnAI story':'Swipe or use arrow keys to explore four chapters in the ABTalksOnAI story'}>
     <motion.div ref={track} className="story-track" style={{x:enabled?x:0}}>{chapters.map(({number,label,title,text,Icon,note,image,alt})=><article className="story-chapter" key={number}>
      <div className="chapter-top"><span>{label}</span><span>{number} / 04</span></div><div className={`chapter-art ${image?'chapter-photo':''}`}>{image?<motion.img src={image} alt={alt} loading="lazy" style={{x:enabled?orbitX:0}}/>:<><motion.span className="chapter-orbit" style={{x:enabled?orbitX:0}}/><span className="chapter-orbit orbit-two"/><Icon strokeWidth={1} aria-hidden="true"/></>}<motion.span className="chapter-number" aria-hidden="true" style={{x:enabled?artX:0}}>{number}</motion.span></div>
      <h3>{title}</h3><p>{text}</p><div className="chapter-note"><span className="record-dot"/>{note}</div>
     </article>)}</motion.div>
-   </div><div className="story-bottom page-wrap"><span>{enabled?'Scroll to follow the story':'Swipe to follow the story'} <ArrowRight size={15}/></span><a className="quiet-link" href="https://app.klymb.ai/" target="_blank" rel="noopener">Explore the community platform <ArrowUpRight size={16}/></a></div>
+   </div><nav className="story-chapter-nav page-wrap" aria-label="Story chapters">{['The podcast','The question','The proof','The campus'].map((label,i)=><button key={label} type="button" aria-current={chapter===i?'step':undefined} onClick={()=>goToChapter(i)}><span>0{i+1}</span>{label}<i aria-hidden="true"/></button>)}</nav><div className="story-bottom page-wrap"><span>{enabled?'Scroll to follow the story':'Swipe to follow the story'} <ArrowRight size={15}/></span><a className="quiet-link" href="https://app.klymb.ai/" target="_blank" rel="noopener">Explore the community platform <ArrowUpRight size={16}/></a></div>
   </div>
  </section>;
 }

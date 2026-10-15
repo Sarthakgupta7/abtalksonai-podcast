@@ -84,3 +84,6 @@ Entrance reveals use a short 65ms ladder across episode rows and guest cards, ca
 
 ## Story and campus content
 The story uses a four-chapter horizontal rail driven by vertical scroll on screens at least 900px wide. Decorative numbers and orbit lines move at different speeds to create horizontal parallax. Smaller screens use native swipe and scroll snap; reduced motion uses a static grid. The story is grounded in pages 3 to 5 of the supplied story PDF. The campus section paraphrases the workshop invitation's outcomes, 60 to 90 minute format and team contact. Community counts, hiring totals, employer titles and superlative growth claims are intentionally omitted because they are unverified or inconsistent across the documents. Historical abtalks.in platform links are updated to app.klymb.ai.
+
+## Editorial polish, 15 October 2026
+Host portrait is a native toggle button, with monochrome and colour layers and a 650ms reveal on desktop hover or keyboard focus. On touch, tapping toggles colour. Only the main host portrait receives this treatment. Portrait framing keeps the face visible; name and identity sit below it. Host headings use a serif name and a compact sans-serif second line, with 15px desktop and 16px phone body copy. Four direct chapter buttons supplement the story's scroll interaction and show the current chapter.
