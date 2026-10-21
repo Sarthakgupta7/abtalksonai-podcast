@@ -52,16 +52,6 @@ export const guestDirectory: Guest[] = [
     ]
   },
   {
-    "name": "Dr. Aniruddha Malpani",
-    "conversations": [
-      {
-        "title": "How AI will transform healthcare & education in India",
-        "url": "https://www.youtube.com/watch?v=Z-SfLBIK87U",
-        "source": "https://www.youtube.com/watch?v=Z-SfLBIK87U"
-      }
-    ]
-  },
-  {
     "name": "Ankit Gupta",
     "conversations": [
       {
@@ -162,6 +152,26 @@ export const guestDirectory: Guest[] = [
     ]
   },
   {
+    "name": "Dr. Aniruddha Malpani",
+    "conversations": [
+      {
+        "title": "How AI will transform healthcare & education in India",
+        "url": "https://www.youtube.com/watch?v=Z-SfLBIK87U",
+        "source": "https://www.youtube.com/watch?v=Z-SfLBIK87U"
+      }
+    ]
+  },
+  {
+    "name": "Dr. Manish Gupta",
+    "conversations": [
+      {
+        "title": "From DRDO scientist to AI entrepreneur",
+        "url": "https://www.youtube.com/watch?v=xrg3Pl1RbsU",
+        "source": "https://www.youtube.com/watch?v=xrg3Pl1RbsU"
+      }
+    ]
+  },
+  {
     "name": "Gaurav Mathur",
     "conversations": [
       {
@@ -228,16 +238,6 @@ export const guestDirectory: Guest[] = [
         "title": "AI Engineer Roadmap, Tools, Agents & The Future of Jobs | AI Architect Podcast",
         "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI-Engineer-Roadmap--Tools--Agents--The-Future-of-Jobs--AI-Architect-Podcast-e3da4hk",
         "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
-      }
-    ]
-  },
-  {
-    "name": "Dr. Manish Gupta",
-    "conversations": [
-      {
-        "title": "From DRDO scientist to AI entrepreneur",
-        "url": "https://www.youtube.com/watch?v=xrg3Pl1RbsU",
-        "source": "https://www.youtube.com/watch?v=xrg3Pl1RbsU"
       }
     ]
   },
@@ -397,6 +397,16 @@ export const guestDirectory: Guest[] = [
     ]
   },
   {
+    "name": "Sunil Grover",
+    "conversations": [
+      {
+        "title": "Next Billion-Dollar Startup Idea? AI, Healthcare & Venture Capital",
+        "url": "https://www.youtube.com/watch?v=m19dviOKDbk",
+        "source": "https://www.youtube.com/watch?v=m19dviOKDbk"
+      }
+    ]
+  },
+  {
     "name": "Tapan Kumar Datta",
     "conversations": [
       {
@@ -413,6 +423,16 @@ export const guestDirectory: Guest[] = [
         "title": "Will AI Replace Jobs? The Truth About Agentic AI, Physical AI & The Future of Careers",
         "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Will-AI-Replace-Jobs--The-Truth-About-Agentic-AI--Physical-AI--The-Future-of-Careers-e3nqadj",
         "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+      }
+    ]
+  },
+  {
+    "name": "Vijay Srinivas Agneeswaran",
+    "conversations": [
+      {
+        "title": "AI vs Human Intelligence: Will AI Kill Coding Jobs?",
+        "url": "https://www.youtube.com/watch?v=tDbW1XodB-o",
+        "source": "https://www.youtube.com/watch?v=tDbW1XodB-o"
       }
     ]
   },

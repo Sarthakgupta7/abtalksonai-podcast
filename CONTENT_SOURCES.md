@@ -15,3 +15,9 @@ Company labels checked 15 October 2026. Kevin Surace: Appvance.ai, https://appva
 Navisha's company display label was updated to Google following the user's supplied LinkedIn profile text, which lists Google as the company and Google Cloud in her headline.
 
 Featured guest designations added 15 October 2026: Kevin Surace, Chairman & CTO (Appvance leadership page, board section). Pranav Pai, Managing Partner & CIO (user-supplied LinkedIn screenshot headline and About; official firm bio also confirms CIO and calls him Founding Partner). Aniruddha Malpani, Founder (Malpani Ventures team page). Navisha Prabhakar, Regional Head (user-supplied profile headline). Role and company replace conversation topics on these four cards; the hero retains its topic labels.
+
+## Episodes added 21 October 2026
+
+- Vijay Srinivas Agneeswaran, Senior Director of AI R&D at Microsoft: https://www.youtube.com/watch?v=tDbW1XodB-o (published 21 October 2026, 30:32).
+- Sunil Grover, Managing Partner at G2C Ventures: https://www.youtube.com/watch?v=m19dviOKDbk (published 14 October 2026, 48:45).
+- Titles, guest names, roles, topics and runtimes checked against the official YouTube player metadata and episode descriptions. Thumbnails saved from the official video thumbnail URLs.
