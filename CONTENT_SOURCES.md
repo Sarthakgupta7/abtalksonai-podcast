@@ -21,3 +21,5 @@ Featured guest designations added 15 October 2026: Kevin Surace, Chairman & CTO 
 - Vijay Srinivas Agneeswaran, Senior Director of AI R&D at Microsoft: https://www.youtube.com/watch?v=tDbW1XodB-o (published 21 October 2026, 30:32).
 - Sunil Grover, Managing Partner at G2C Ventures: https://www.youtube.com/watch?v=m19dviOKDbk (published 14 October 2026, 48:45).
 - Titles, guest names, roles, topics and runtimes checked against the official YouTube player metadata and episode descriptions. Thumbnails saved from the official video thumbnail URLs.
+
+- Sunil Grover featured portrait and Managing Partner designation: https://www.g2cventures.com/team , official photo https://www.g2cventures.com/assets/sunil-nLzrXbX6.webp . Replaces Kevin in the hero portrait fan and featured guests, while keeping Kevin in the episode archive.

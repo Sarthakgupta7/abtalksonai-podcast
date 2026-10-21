@@ -280,3 +280,5 @@ body{background:radial-gradient(ellipse at 50% 0,#41372225,transparent 38%),#101
 
 .guest-tile{min-height:335px}.guest-tile .guest-image{bottom:116px}.guest-tile-caption .guest-designation{display:block;color:#c8c2b6;font-size:11px;line-height:1.5;margin-top:7px;min-height:17px}.guest-tile-caption .guest-company{margin-top:3px}
 @media(max-width:760px){.guest-tile{min-height:315px}.guest-tile .guest-image{bottom:123px}.guest-tile-caption .guest-designation{font-size:11px;line-height:1.45;min-height:32px}.guest-tile-caption .guest-company{margin-top:2px}}
+
+.portrait-sunil{object-fit:cover;object-position:center 20%}
