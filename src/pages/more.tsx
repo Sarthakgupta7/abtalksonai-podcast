@@ -3,7 +3,7 @@ import {episodes,latestEpisode,portraitSrc} from '../episodes';
 import {GuestDirectory} from '../components/guest-directory';
 import {guestDirectory} from '../guests';
 import {StoryJourney,CampusWorkshop} from '../components/story-and-campus';
-import {CtaBand,HeroMedia,HostMedia,PageHero,Signature,linkedin,usePlayer} from '../components/site';
+import {CtaBand,HeroMedia,HostMedia,Kicker,PageHero,Signature,linkedin,usePlayer} from '../components/site';
 import {PersonCard} from './home';
 import {SubscribeBand} from './show';
 
@@ -34,11 +34,13 @@ export function GuestsPage(){
 export function HostPage(){
  const {play}=usePlayer();
  return <>
-  <PageHero kicker="Meet the host" title={<>Anil Bajpai.<br/>Always <em>curious.</em></>} media={<HostMedia interactive/>}
-   actions={<><a className="btn btn-gold" href={linkedin} target="_blank" rel="noopener">Connect on LinkedIn <ArrowUpRight size={15}/></a><button className="btn btn-quiet" onClick={()=>play(latestEpisode)}><Play size={13} fill="currentColor"/> Watch the latest episode</button></>}>
-   <p>Anil Bajpai is the founder of ABTalksOnAI and your host. He brings his experience in enterprise technology to conversations about AI, leadership and careers.</p>
-   <p>His curiosity connects big ideas with everyday decisions: how we work, what we build and where we go next. Every conversation is a chance to learn from someone who sees the world differently.</p>
-  </PageHero>
+  <section className="page-hero host-page-hero" aria-labelledby="host-page-title">
+   <div className="host-page-heading"><Kicker>Meet the host</Kicker><h1 id="host-page-title">Anil Bajpai.<br/>Always <em>curious.</em></h1></div>
+   <HostMedia interactive/>
+   <div className="host-page-biography"><div className="hero-body"><p>Anil Bajpai is the founder of ABTalksOnAI and your host. He brings his experience in enterprise technology to conversations about AI, leadership and careers.</p><p>His curiosity connects big ideas with everyday decisions: how we work, what we build and where we go next. Every conversation is a chance to learn from someone who sees the world differently.</p></div>
+    <div className="hero-actions"><a className="btn btn-gold" href={linkedin} target="_blank" rel="noopener">Connect on LinkedIn <ArrowUpRight size={15}/></a><button className="btn btn-quiet" onClick={()=>play(latestEpisode)}><Play size={13} fill="currentColor"/> Watch the latest episode</button></div>
+   </div>
+  </section>
   <section className="cream-section"><div className="page-wrap host-quote">
    <blockquote className="pull-quote"><span className="quote-mark" aria-hidden="true">“</span><p>AI is not a feature. It’s a new operating model.</p><footer><Signature/></footer></blockquote>
    <div className="host-facts"><div><strong>{episodes.length}</strong><span>Featured conversations</span></div><div><strong>{guestDirectory.length}</strong><span>Guests in conversation</span></div><div><strong>{new Set(episodes.map(e=>e.topic)).size}</strong><span>Themes, from AI at work to human stories</span></div></div>
@@ -49,7 +51,7 @@ export function HostPage(){
 
 export function CampusPage(){
  return <>
-  <PageHero kicker="Campus" media={<HeroMedia><img src="/assets/studio-hero.jpg" alt=""/></HeroMedia>} title={<>Beyond the microphone,<br/><em>into the classroom.</em></>} actions={<a className="btn btn-gold" href="mailto:team@abtalks.in?subject=Campus%20AI%20workshop%20enquiry">Plan a campus workshop <ArrowUpRight size={15}/></a>}>
+  <PageHero className="campus-page-hero" kicker="Campus" media={<HeroMedia><img src="/assets/studio-hero.jpg" alt=""/></HeroMedia>} title={<>Beyond the microphone,<br/><em>into the classroom.</em></>} actions={<a className="btn btn-gold" href="mailto:team@abtalks.in?subject=Campus%20AI%20workshop%20enquiry">Plan a campus workshop <ArrowUpRight size={15}/></a>}>
    <p>The questions raised on the podcast became a reason to build together: challenges, workshops and ViCodathon, connecting what industry needs with what students can do next.</p>
   </PageHero>
   <StoryJourney/>

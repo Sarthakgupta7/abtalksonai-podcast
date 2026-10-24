@@ -541,3 +541,54 @@ main{animation:page-in 420ms var(--ease) both}
  .mobile-bottom-nav [aria-current=page],.mobile-bottom-nav>button[aria-expanded=true]{color:var(--gold-hi);border-color:#dcbb7733;background:#dcbb7717}
  .mobile-bottom-nav>a:active,.mobile-bottom-nav>button:active{transform:scale(.96)}
 }
+
+/* Dedicated image panels keep host and campus copy clear at every screen size. */
+.host-page-hero,.campus-page-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;padding-inline:max(0px,calc((100vw - 1360px)/2));gap:0}
+.host-page-hero .hero-inner,.campus-page-hero .hero-inner{grid-column:1;grid-row:1;width:100%;min-height:0;padding-block:64px;padding-right:40px;pointer-events:auto}
+.host-page-hero h1,.campus-page-hero h1{font-size:clamp(2.75rem,4.5vw,4.3rem);line-height:1.08}
+.host-page-hero .host-colour-media{position:relative;inset:auto;grid-column:2;grid-row:1;justify-self:center;align-self:center;width:min(calc(100% - 64px),360px);max-height:none;aspect-ratio:2/3;margin:40px 64px 40px 0;opacity:1;border:1px solid var(--line-gold);border-radius:14px;overflow:hidden;background:#171510}
+.host-page-hero .host-colour-media:after{display:none}
+.host-page-hero .host-colour-media button{inset:0;display:block;width:100%;height:100%}
+.host-page-hero .host-colour-media img{object-fit:contain;object-position:center;filter:grayscale(1);transition:filter 450ms var(--ease)}
+.host-page-hero .host-colour-media button.is-colour img,.host-page-hero .host-colour-media button:focus-visible img{filter:grayscale(0)}
+.host-page-hero .host-colour-media button>span{inset:auto 0 0;padding:28px 12px 12px;background:linear-gradient(transparent,#0c0b09d9);font-size:11px;text-align:center;color:#f0d9a3}
+.campus-page-hero .page-hero-media{position:relative;inset:auto;grid-column:2;grid-row:1;width:calc(100% - 40px);height:auto;aspect-ratio:16/9;margin:40px 40px 40px 0;z-index:0;opacity:1;border:1px solid var(--line-gold);border-radius:12px;overflow:hidden;background:#0c0b09}
+.campus-page-hero .page-hero-media img{object-fit:contain;object-position:center;filter:none}
+.campus-page-hero .page-hero-media:after{display:none}
+.chapter-photo>img{width:100%;left:0;object-fit:contain;object-position:center!important;transform:none!important}
+@media(hover:hover){.host-page-hero .host-colour-media button:hover img{filter:grayscale(0)}}
+@media(max-width:960px){
+ .host-page-hero,.campus-page-hero{grid-template-columns:minmax(0,1fr)}
+ .host-page-hero .hero-inner,.campus-page-hero .hero-inner{grid-row:1;padding-block:44px 32px;padding-right:32px}
+ .host-page-hero .host-colour-media{grid-column:1;grid-row:2;margin:0 auto 40px;width:min(calc(100% - 64px),360px)}
+ .campus-page-hero .page-hero-media{grid-column:1;grid-row:2;margin:0 auto 40px;width:calc(100% - 64px);max-width:720px}
+ .host-page-hero .hero-copy,.campus-page-hero .hero-copy{max-width:640px}
+ .host-page-hero h1,.campus-page-hero h1{font-size:clamp(2.5rem,7vw,3.8rem);line-height:1.12}
+}
+@media(max-width:640px){
+ .host-page-hero .hero-inner,.campus-page-hero .hero-inner{padding:40px 20px 28px}
+ .host-page-hero h1,.campus-page-hero h1{font-size:clamp(2.3rem,9.5vw,3.4rem);letter-spacing:-.025em}
+ .host-page-hero .hero-body p,.campus-page-hero .hero-body p{font-size:15px;line-height:1.8}
+ .host-page-hero .hero-actions,.campus-page-hero .hero-actions{margin-top:26px;gap:12px}
+ .host-page-hero .host-colour-media{width:min(calc(100% - 40px),360px);margin-bottom:36px}
+ .campus-page-hero .page-hero-media{width:calc(100% - 40px);margin-bottom:36px}
+ .story-chapter .chapter-photo{height:170px}
+}
+@media(prefers-reduced-motion:reduce){.host-page-hero .host-colour-media img{transition:none}}
+
+.host-page-heading{grid-column:1;grid-row:1;align-self:end;padding:64px 40px 0 64px}
+.host-page-biography{grid-column:1;grid-row:2;align-self:start;padding:0 40px 64px 64px}
+.host-page-hero .host-colour-media{grid-row:1 / 3}
+@media(max-width:960px){
+ .host-page-heading{grid-column:1;grid-row:1;padding:40px 32px 28px}
+ .host-page-hero .host-colour-media{grid-row:2;margin-bottom:0}
+ .host-page-biography{grid-column:1;grid-row:3;padding:10px 32px 44px}
+ .host-page-biography .hero-body{max-width:640px;margin-inline:auto}
+ .host-page-biography .hero-actions{max-width:640px;margin-inline:auto;margin-top:26px}
+}
+@media(max-width:640px){
+ .host-page-heading{padding:36px 20px 24px}
+ .host-page-biography{padding:8px 20px 36px}
+ .host-page-hero .host-colour-media{width:min(calc(100% - 40px),340px)}
+ .host-page-biography .hero-actions{gap:12px}
+}
