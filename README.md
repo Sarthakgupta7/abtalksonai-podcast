@@ -1,19 +1,15 @@
-# ABTalksOnAI podcast
+# ABTalksOnAI podcast website
 
-A separate podcast website for ABTalksOnAI, hosted by Anil Bajpai. Built with React, TypeScript, Vite, Tailwind CSS and Motion.
+React, TypeScript, Vite, Tailwind CSS and Motion. Requires Node.js 22 LTS or later.
 
-Live website: https://abtalksonai-podcast.vercel.app
-
-Source: https://github.com/Sarthakgupta7/abtalksonai-podcast
-
-## Development
+## Run locally
 
 ```sh
 npm ci
 npm run dev
 ```
 
-The preview runs at http://127.0.0.1:4173.
+Open http://127.0.0.1:4173.
 
 ## Build
 
@@ -22,10 +18,8 @@ npx tsc --noEmit
 npm run build
 ```
 
-Deploy `dist/` as static output. Vercel configuration is included.
+Deploy `dist/` as static output with the supplied Vercel configuration. The default site has Home, The Show, Conversations, Our Guests, Meet Anil and Campus pages. The alternate editorial layout remains available at `/editorial`. Production: https://www.abtalks.in/.
 
-## Features
+The website includes the current episode catalogue, 51 searchable guests, topic filters, duration sorting, video/audio dialogs, campus photography, a horizontal story, responsive layouts and reduced-motion support. Guest suggestions prepare an email draft for the visitor to send.
 
-Real episode links and playback, guest/topic search, responsive guest gallery, original supplied logo, spring cursor-tracking microphone, scroll word reveals and restrained image parallax. Reduced-motion settings are respected. Guest suggestions prepare an email draft and do not send or store submissions.
-
-See `LIBRARY_SOURCES.md` for component and asset provenance and `CLAUDE_HANDOFF.md` for the editing context.
+Legacy section links resolve to their corresponding pages. Platform URLs including `/dashboard`, `/claude-signup`, `/verify`, `/claim`, `/r` and `/hackathon` redirect to app.klymb.ai.

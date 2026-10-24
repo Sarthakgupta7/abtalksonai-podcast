@@ -41,6 +41,26 @@
   ],
   "rewrites": [
     {
+      "source": "/the-show",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/conversations",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/guests",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/meet-anil",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/campus",
+      "destination": "/index.html"
+    },
+    {
       "source": "/editorial",
       "destination": "/index.html"
     },

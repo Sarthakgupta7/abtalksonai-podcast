@@ -23,3 +23,7 @@ Featured guest designations added 15 October 2026: Kevin Surace, Chairman & CTO 
 - Titles, guest names, roles, topics and runtimes checked against the official YouTube player metadata and episode descriptions. Thumbnails saved from the official video thumbnail URLs.
 
 - Sunil Grover featured portrait and Managing Partner designation: https://www.g2cventures.com/team , official photo https://www.g2cventures.com/assets/sunil-nLzrXbX6.webp . Replaces Kevin in the hero portrait fan and featured guests, while keeping Kevin in the episode archive.
+
+## Studio design integration, 24 October 2026
+
+Visual reference: user-supplied ABTalksOnAI-Website.zip. Integrated its six-page layout, near-black/champagne palette, Source Serif 4 and Manrope typography, studio hero and individual guest portraits. Retained current episodes, Sunil's featured placement, verified guest directory, editorial alternate, PDF photography and platform redirects. The archive's node_modules, tool files and backup archive were excluded from the application.
