@@ -1,5 +1,5 @@
 import {createContext,useContext,useEffect,useRef,useState,type ReactNode} from 'react';
-import {ArrowUpRight,Check,Copy,Instagram,Linkedin,Mail,Menu,Play,X,Youtube} from 'lucide-react';
+import {ArrowUpRight,Check,Copy,Instagram,Linkedin,Mail,Menu,Play,X,Youtube,House,Clapperboard,Users,Ellipsis} from 'lucide-react';
 import {VelocityTabs} from './vendor/velocity-tabs';
 import {Link,routes,usePath} from '../router';
 import {coverSrc,portraitSrc,type Episode} from '../episodes';
@@ -25,6 +25,24 @@ export function SiteHeader(){
   <a className="nav-youtube" href={youtube} target="_blank" rel="noopener"><Youtube size={15}/> YouTube <ArrowUpRight size={14}/></a>
   <button className="menu-button icon-button" aria-label={open?'Close menu':'Open menu'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X size={20}/>:<Menu size={20}/>}</button>
  </div></header>;
+}
+
+
+export function MobileNavigation(){
+ const path=usePath();const more=useRef<HTMLDialogElement>(null);const[open,setOpen]=useState(false);
+ const extraRoutes=routes.filter(r=>['/the-show','/meet-anil','/campus'].includes(r.path));
+ useEffect(()=>{more.current?.close()},[path]);
+ useEffect(()=>{const media=matchMedia('(max-width:640px)');const close=()=>{if(!media.matches)more.current?.close()};media.addEventListener('change',close);return()=>media.removeEventListener('change',close)},[]);
+ return <>
+  <nav className="mobile-bottom-nav" aria-label="Mobile navigation">
+   {[{to:'/' as const,label:'Home',Icon:House},{to:'/conversations' as const,label:'Episodes',Icon:Clapperboard},{to:'/guests' as const,label:'Guests',Icon:Users}].map(({to,label,Icon})=><Link key={to} to={to} aria-current={path===to?'page':undefined}><Icon size={19} strokeWidth={1.7} aria-hidden="true"/><span>{label}</span></Link>)}
+   <button type="button" aria-label="More pages" aria-current={extraRoutes.some(r=>r.path===path)?'page':undefined} aria-haspopup="dialog" aria-expanded={open} aria-controls="mobile-more-pages" onClick={()=>{more.current?.showModal();setOpen(true)}}><Ellipsis size={20} aria-hidden="true"/><span>More</span></button>
+  </nav>
+  <dialog ref={more} id="mobile-more-pages" className="mobile-more-pages" aria-labelledby="mobile-more-title" onClose={()=>setOpen(false)} onClick={e=>{if(e.target===e.currentTarget){const r=e.currentTarget.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)more.current?.close()}}}>
+   <div className="mobile-more-heading"><h2 id="mobile-more-title">Explore ABTalksOnAI</h2><button type="button" className="icon-button" aria-label="Close more pages" onClick={()=>more.current?.close()}><X size={18}/></button></div>
+   <nav aria-label="More pages">{extraRoutes.map(r=><Link key={r.path} to={r.path} aria-current={path===r.path?'page':undefined} onClick={()=>more.current?.close()}>{r.label}<ArrowUpRight size={17} aria-hidden="true"/></Link>)}</nav>
+  </dialog>
+ </>;
 }
 
 export function SiteFooter(){

@@ -2,7 +2,7 @@ import {EditorialSite} from './components/editorial-site';
 import {useEffect,useMemo,useState} from 'react';
 import {routes,usePath} from './router';
 import {type Episode} from './episodes';
-import {GuestForm,PlayerContext,PlayerDialog,SiteFooter,SiteHeader} from './components/site';
+import {GuestForm,PlayerContext,PlayerDialog,SiteFooter,SiteHeader,MobileNavigation} from './components/site';
 import {HomePage} from './pages/home';
 import {ShowPage} from './pages/show';
 import {ConversationsPage} from './pages/conversations';
@@ -20,7 +20,7 @@ export default function App(){
   <a className="skip-link" href="#main">Skip to content</a>
   {path!=='/editorial'&&<SiteHeader/>}
   {path==='/editorial'?<EditorialSite onPlay={setSelected}/>:<main id="main" key={path}><Page/></main>}
-  {path!=='/editorial'&&<SiteFooter/>}
+  {path!=='/editorial'&&<><SiteFooter/><MobileNavigation/></>}
   <PlayerDialog episode={selected} onClose={()=>setSelected(null)}/>
   <GuestForm open={guestOpen} onClose={()=>setGuestOpen(false)}/>
  </PlayerContext.Provider>;

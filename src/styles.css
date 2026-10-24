@@ -139,9 +139,9 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .person-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
 .person-card{display:flex;flex-direction:column;padding:0;text-align:left;background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color 220ms var(--ease),transform 300ms var(--ease),box-shadow 300ms var(--ease)}
 .person-card:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:0 20px 40px #0008}
-.person-photo{display:block;aspect-ratio:1/1.02;overflow:hidden;background:#050505}
-.person-photo img{object-position:50% 20%;transition:transform 500ms var(--ease)}
-.person-card:hover .person-photo img{transform:scale(1.04)}
+.person-photo{display:block;aspect-ratio:4/5;overflow:hidden;background:#050505;padding:12px 12px 0}
+.person-photo img{object-fit:contain;object-position:center bottom;transition:transform 350ms var(--ease)}
+.person-card:hover .person-photo img{transform:scale(1.02)}
 .person-card.is-host .person-photo img{filter:brightness(.9) sepia(.08)}
 .person-text{display:block;padding:14px 16px 17px}
 .person-text strong{display:block;font-size:15px;font-weight:700;color:var(--foreground)}
@@ -159,7 +159,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 /* Cream section (The Show, Meet Anil) */
 .cream-section{background:#100f0d;color:var(--foreground);padding-block:88px;border-bottom:1px solid var(--hairline)}
 .quote-split{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:64px;align-items:center}
-.quote-media{aspect-ratio:4/3}
+.quote-media{aspect-ratio:16/9;align-self:center}
 .pull-quote{position:relative;padding-left:4px}
 .quote-mark{display:block;font-family:var(--serif);font-size:96px;line-height:.6;color:var(--primary);height:44px}
 .pull-quote p{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.25;color:#f5efe4;letter-spacing:-.015em}
@@ -209,7 +209,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .episode-card{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px;padding:14px;background:var(--card);border:1px solid var(--border);border-radius:8px;transition:border-color 220ms var(--ease),background-color 220ms var(--ease)}
 .episode-card:hover{border-color:var(--line-gold);background:#161513}
 .episode-card:last-child:nth-child(odd){grid-column:1/-1;grid-template-columns:minmax(0,1fr) minmax(0,3fr)}
-.episode-thumb{position:relative;display:block;width:100%;aspect-ratio:16/10;padding:0;border:0;border-radius:4px;overflow:hidden;background:#050505}
+.episode-thumb{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:4px;overflow:hidden;background:#050505}
 .episode-thumb img{object-position:50% 25%;transition:transform 500ms var(--ease)}
 .episode-card:hover .episode-thumb img{transform:scale(1.04)}
 .episode-thumb .play-disc{width:44px;height:44px;box-shadow:none}
@@ -234,7 +234,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 /* Our guests */
 .guests-page{padding-block:64px 88px}
 .guest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.guest-grid .person-photo{aspect-ratio:1/.9}
+.guest-grid .person-photo{aspect-ratio:4/5;max-height:360px;width:100%;padding:18px 18px 0}
 .guest-grid .person-text{padding:18px 20px 22px}
 .guest-grid .person-text strong{font-family:var(--serif);font-size:22px;font-weight:500}
 .guest-grid .person-text small{font-size:13.5px}
@@ -488,3 +488,56 @@ main{animation:page-in 420ms var(--ease) both}
  .story-pin{padding-block:20px}.story-heading{margin-bottom:18px}.story-heading .kicker{margin-bottom:10px}.story-heading h2{font-size:28px}.story-chapter{padding:18px 22px}.chapter-art,.chapter-photo{height:82px;margin-block:10px}.story-chapter h3{font-size:24px;margin-bottom:10px}.story-chapter>p{font-size:13px;min-height:0;line-height:1.55}.chapter-note{margin-top:12px;padding-top:12px}.story-chapter-nav{margin-top:16px}.story-bottom{margin-top:14px}
 }
 @media(prefers-reduced-motion:reduce) and (max-width:760px){.story-track{grid-template-columns:minmax(0,1fr);padding-inline:16px;gap:16px}.story-chapter{width:auto;min-width:0}.story-chapter-nav{display:none}}
+
+/* Preserve full thumbnail artwork and give every portrait breathing room. */
+.cover-button{align-self:center}
+.cover-button>img{position:absolute;inset:0;object-fit:contain}
+.cover-button:hover>img,.episode-card:hover .episode-thumb img{transform:none}
+.episode-thumb img{object-fit:contain;object-position:center}
+.person-card{min-width:0}.person-text{flex:1;min-width:0}
+.person-text strong,.person-text small{overflow-wrap:break-word}
+.person-row{scroll-padding-inline:16px}
+@media(max-width:640px){
+ .quote-split{gap:28px}.quote-media{aspect-ratio:16/9}
+ .pull-quote p{font-size:clamp(1.55rem,6.5vw,2rem);line-height:1.35}
+ .guest-grid .person-photo{padding:12px 10px 0;max-height:none}
+ .guest-grid .person-text{padding:14px 12px 16px}
+ .guest-grid .person-text strong{font-size:17px;line-height:1.25}
+ .guest-grid .person-text small{font-size:12px;line-height:1.6;margin-top:8px}
+ .person-row .person-photo{aspect-ratio:4/5;padding:10px 10px 0}
+ .person-row .person-text{min-height:76px}
+ .play-disc{width:48px;height:48px;box-shadow:0 0 0 5px #dcbb7712}
+ .player-dialog{max-height:calc(100dvh - 24px);overflow-y:auto}
+ .player-bottom{align-items:flex-start;flex-wrap:wrap}
+}
+@media(max-width:379px){
+ .guest-grid{grid-template-columns:minmax(0,1fr)}
+ .guest-grid .person-card{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center}
+ .guest-grid .person-photo{height:156px;aspect-ratio:auto;padding:10px 8px 0}
+ .guest-grid .person-text{padding:16px 12px}
+ .guest-grid .person-text strong{font-size:18px}
+ .guest-grid .person-text small{font-size:12px}
+ .home-hero .hero-actions{gap:16px}
+ .home-hero .btn-lg{padding-inline:20px;font-size:15px}
+}
+/* Sunil's official source is landscape; a centred crop keeps his full head at the same scale. */
+.person-photo img[src$="sunil-grover.webp"]{object-fit:cover;object-position:center 20%}
+
+/* Thumb-friendly navigation, above the device's home indicator. */
+.mobile-bottom-nav{display:none}
+.mobile-more-pages{position:fixed;inset:auto 16px calc(100px + env(safe-area-inset-bottom)) 16px;margin:0 auto;width:calc(100% - 32px);max-width:430px;padding:18px;border:1px solid var(--line-gold);border-radius:20px;background:#171510;color:var(--foreground);box-shadow:0 18px 70px #0008}
+.mobile-more-pages::backdrop{background:#0008;backdrop-filter:blur(5px)}
+.mobile-more-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.mobile-more-heading h2{font:600 15px/1.4 var(--sans)}
+.mobile-more-heading .icon-button{width:40px;height:40px}
+.mobile-more-pages nav{display:grid;padding-top:8px}
+.mobile-more-pages nav a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding:12px;border-radius:10px;font-size:15px}
+.mobile-more-pages nav a[aria-current=page]{background:#dcbb7712;color:var(--primary)}
+.mobile-more-pages nav svg{color:var(--primary)}
+@media(max-width:640px){
+ .site-footer{margin-bottom:calc(96px + env(safe-area-inset-bottom))}
+ .mobile-bottom-nav{position:fixed;z-index:45;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;max-width:440px;margin-inline:auto;padding:6px;border:1px solid #dcbb7759;border-radius:22px;background:#15130ff2;box-shadow:0 8px 32px #0006,inset 0 1px 0 #fff1;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+ .mobile-bottom-nav>a,.mobile-bottom-nav>button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:54px;padding:7px 4px;border:1px solid transparent;border-radius:16px;background:transparent;color:#b8b0a1;font:600 11px/1.2 var(--sans);transition:color 160ms var(--ease),background-color 160ms var(--ease),transform 160ms var(--ease)}
+ .mobile-bottom-nav [aria-current=page],.mobile-bottom-nav>button[aria-expanded=true]{color:var(--gold-hi);border-color:#dcbb7733;background:#dcbb7717}
+ .mobile-bottom-nav>a:active,.mobile-bottom-nav>button:active{transform:scale(.96)}
+}
