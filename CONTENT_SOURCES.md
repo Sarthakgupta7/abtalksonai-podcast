@@ -27,3 +27,10 @@ Featured guest designations added 15 October 2026: Kevin Surace, Chairman & CTO 
 ## Studio design integration, 24 October 2026
 
 Visual reference: user-supplied ABTalksOnAI-Website.zip. Integrated its six-page layout, near-black/champagne palette, Source Serif 4 and Manrope typography, studio hero and individual guest portraits. Retained current episodes, Sunil's featured placement, verified guest directory, editorial alternate, PDF photography and platform redirects. The archive's node_modules, tool files and backup archive were excluded from the application.
+
+## Archive and interface audit, 26 October 2026
+
+- Added 41 directory-linked conversations to the on-site catalogue, keeping the existing 11 featured entries. Public titles, guest identity and links come from `src/guests.ts`; audio enclosures, publication dates, durations and description excerpts come from the official feed: https://anchor.fm/s/10a76dd14/podcast/rss . Snapshot stored in `src/archive.json`.
+- The five additional YouTube conversations use official video IDs and official `i.ytimg.com` thumbnails. Entries without verified runtimes omit that field rather than estimating it.
+- Archived audio uses labelled ABTalksOnAI artwork rather than an invented guest portrait. No chapters or timestamps were fabricated.
+- Existing host/guest photographs retain their source content. Portrait alignment is CSS framing only.

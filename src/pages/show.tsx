@@ -16,9 +16,9 @@ export function SubscribeBand(){
 
 export function ShowPage(){
  return <>
-  <PageHero kicker="The show" title="Why ABTalksOnAI?" subtitle="Because great conversations build a better tomorrow." media={<HostMedia/>}
+  <PageHero kicker="The show" title="Why ABTalksOnAI?" subtitle="AI is changing work. Let’s understand it together." media={<HostMedia/>}
    actions={<Link to="/conversations" className="btn btn-gold"><Play size={13} fill="currentColor"/> Watch the show</Link>}>
-   <p>ABTalksOnAI is a candid, insightful podcast hosted by Anil Bajpai, where leaders, thinkers and doers come together to share their journeys, ideas and perspectives on the world we live in.</p>
+   <p>Hosted by Anil Bajpai, ABTalksOnAI brings founders, investors and practitioners into conversations about AI, careers, leadership and the decisions behind their work.</p>
   </PageHero>
 
   <section className="cream-section"><div className="page-wrap">

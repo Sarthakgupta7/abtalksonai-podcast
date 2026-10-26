@@ -22,10 +22,10 @@ const mosaicGuests=['amrish','pranav','vladimir','kathrin','manish','sunil','wal
 export function GuestsPage(){
  const {play,suggestGuest}=usePlayer();
  return <>
-  <PageHero kicker="Our guests" media={<HeroMedia className="hero-mosaic guest-mosaic">{mosaicGuests.map(name=><img key={name} src={portraitSrc(name)} alt=""/>)}</HeroMedia>} title={<>A title tells you what they do.<br/>A conversation tells you <em>who they are.</em></>}><p>Founders. Investors. Practitioners. Every voice brings a different perspective.</p></PageHero>
-  <section className="page-wrap guests-page">
-   <div className="guest-grid">{featuredGuests.map(g=>{const episode=episodes.find(e=>g.name==='sunil'?e.id==='m19dviOKDbk':e.portrait===g.name)!;return <PersonCard key={g.name} {...g} actionLabel={`${episode.audioUrl?'Listen to':'Watch'} the conversation with ${g.label}`} onOpen={()=>play(episode)}/>})}</div>
+  <PageHero kicker="Our guests" media={<HeroMedia className="hero-mosaic guest-mosaic">{mosaicGuests.map(name=><img key={name} src={portraitSrc(name)} alt=""/>)}</HeroMedia>} className="guests-hero" title={<>Meet the people<br/>behind the <em>ideas.</em></>}><p>Founders. Investors. Practitioners. Every voice brings a different perspective.</p></PageHero>
+  <section className="page-wrap guests-page guests-search-first">
    <GuestDirectory/>
+   <h2 className="featured-voices-heading">A few familiar voices</h2><div className="guest-grid">{featuredGuests.map(g=>{const episode=episodes.find(e=>g.name==='sunil'?e.id==='m19dviOKDbk':e.portrait===g.name)!;return <PersonCard key={g.name} {...g} actionLabel={`${episode.audioUrl?'Listen to':'Watch'} the conversation with ${g.label}`} onOpen={()=>play(episode)}/>})}</div>
   </section>
   <CtaBand title="Who should we talk to next?" text="A story worth sharing. A question worth asking. Tell us who you’d like to hear from." action={<button className="btn btn-gold" onClick={suggestGuest}>Suggest a guest <ArrowUpRight size={15}/></button>}/>
  </>;
@@ -35,10 +35,10 @@ export function HostPage(){
  const {play}=usePlayer();
  return <>
   <section className="page-hero host-page-hero" aria-labelledby="host-page-title">
-   <div className="host-page-heading"><Kicker>Meet the host</Kicker><h1 id="host-page-title">Anil Bajpai.<br/>Always <em>curious.</em></h1></div>
+   <div className="host-page-heading"><Kicker>Meet the host</Kicker><h1 id="host-page-title">Anil Bajpai.<br/>Always <em>curious.</em></h1><p className="host-short-intro">Founder of ABTalksOnAI. Exploring AI, leadership and careers through thoughtful conversations.</p><a className="btn btn-gold host-intro-cta" href={linkedin} target="_blank" rel="noopener">Connect on LinkedIn <ArrowUpRight size={15}/></a></div>
    <HostMedia interactive/>
    <div className="host-page-biography"><div className="hero-body"><p>Anil Bajpai is the founder of ABTalksOnAI and your host. He brings his experience in enterprise technology to conversations about AI, leadership and careers.</p><p>His curiosity connects big ideas with everyday decisions: how we work, what we build and where we go next. Every conversation is a chance to learn from someone who sees the world differently.</p></div>
-    <div className="hero-actions"><a className="btn btn-gold" href={linkedin} target="_blank" rel="noopener">Connect on LinkedIn <ArrowUpRight size={15}/></a><button className="btn btn-quiet" onClick={()=>play(latestEpisode)}><Play size={13} fill="currentColor"/> Watch the latest episode</button></div>
+    <div className="hero-actions"><button className="btn btn-quiet" onClick={()=>play(latestEpisode)}><Play size={13} fill="currentColor"/> Watch the latest episode</button></div>
    </div>
   </section>
   <section className="cream-section"><div className="page-wrap host-quote">

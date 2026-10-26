@@ -592,3 +592,72 @@ main{animation:page-in 420ms var(--ease) both}
  .host-page-hero .host-colour-media{width:min(calc(100% - 40px),340px)}
  .host-page-biography .hero-actions{gap:12px}
 }
+
+/* Audit corrections: align photographic scale, simplify discovery and preserve focus. */
+.person-row .person-photo,.guest-grid .person-photo{position:relative;aspect-ratio:4/5;width:100%;height:auto;max-height:none;padding:0;background:#080807}
+.person-photo img{position:absolute;left:50%;top:4%;width:100%;height:auto;max-width:none;object-fit:initial;transform:translateX(-50%);transition:filter 250ms var(--ease)}
+.person-card:hover .person-photo img{transform:translateX(-50%)}
+.person-sunil .person-photo img{width:115%;top:8%;height:auto;object-fit:initial}
+.person-anil .person-photo img{width:145%;top:-5%}
+.person-card.is-host .person-photo img{filter:none}
+.person-row .person-text{min-height:126px;padding:18px 16px 20px}
+.person-row .person-text strong{font-size:17px;line-height:1.35}
+.person-row .person-text small{font-size:12px;line-height:1.6;margin-top:8px}
+.person-photo:after{content:'';position:absolute;inset:auto 0 0;height:16%;background:linear-gradient(transparent,#080807);pointer-events:none}
+.person-row{align-items:stretch}
+.home-hero-lede{max-width:490px;line-height:1.7}
+.guests-search-first{padding-top:32px}
+.guests-search-first>.guest-directory{margin-top:0;padding-top:0;border-top:0}
+.featured-voices-heading{margin:64px 0 28px;font:400 clamp(1.8rem,3vw,2.6rem)/1.2 var(--serif)}
+.guests-hero .hero-inner,.library-hero .hero-inner{min-height:0;padding-block:60px 44px}
+.guests-hero h1,.library-hero h1{font-size:clamp(2.5rem,4.5vw,4rem)}
+.host-short-intro{max-width:470px;margin-top:24px;font-size:17px;line-height:1.8;color:var(--text-secondary)}
+.host-intro-cta{margin-top:24px;margin-bottom:30px}
+.host-page-biography .hero-body{margin-top:0}
+.episode-view-tabs button[aria-pressed=true]{color:var(--primary-foreground)}
+.episode-view-tabs button[aria-pressed=false]{color:var(--text-secondary)}
+.episode-view-tabs button{min-height:44px}
+.episode-share{padding:6px 0;background:none;border:0;min-height:44px}
+.player-bottom{gap:12px 22px;flex-wrap:wrap}
+.episode-notes{max-width:760px}
+.episode-notes p{line-height:1.8;overflow-wrap:anywhere}
+.episode-published{font-size:13px;color:var(--text-secondary)}
+.episode-thumb>img{width:100%;height:100%;object-fit:contain}
+.episode-card{isolation:isolate}
+.episode-body h3 button:after{z-index:1}
+.episode-arrow{pointer-events:none}
+main:focus{outline:none}
+/* A portrait uses a portrait inset; event photos retain their complete compositions. */
+.story-chapter:first-child .chapter-photo{background:linear-gradient(120deg,#342e20,#171510)}
+.story-chapter:first-child .chapter-photo>img{width:auto;max-width:100%;left:50%;object-fit:contain;transform:translateX(-50%)!important}
+@media(max-width:960px){.host-intro-cta{margin-bottom:0}.host-page-heading{max-width:700px}.host-page-biography{padding-top:26px}}
+@media(max-width:640px){
+ .person-row{grid-template-columns:repeat(5,minmax(190px,1fr));gap:14px}
+ .person-row .person-photo{padding:0}
+ .person-row .person-text{min-height:134px;padding:15px 14px 18px}
+ .person-row .person-text strong{font-size:17px}
+ .person-row .person-text small{font-size:12px}
+ .guests-hero .hero-inner,.library-hero .hero-inner{padding-block:32px 28px}
+ .guests-hero h1,.library-hero h1{font-size:clamp(2.2rem,9vw,3rem)}
+ .guests-hero .hero-body{margin-top:18px}
+ .guests-search-first{padding-top:20px}
+ .directory-heading h3{display:none}
+ .directory-heading p{margin-top:0}
+ .directory-count{margin-top:18px}
+ .featured-voices-heading{margin-top:44px}
+ .host-short-intro{font-size:15px;line-height:1.8;margin-top:18px}
+ .host-page-heading{padding-bottom:28px}
+ .host-page-hero .host-colour-media{width:min(calc(100% - 80px),280px)}
+ .episode-body{padding-right:4px}
+ .player-bottom>a,.player-bottom>.episode-share{min-height:44px;display:inline-flex;align-items:center}
+ .episode-view-tabs{max-width:100%!important}
+ .guest-grid .person-photo{aspect-ratio:4/5}
+}
+@media(max-width:379px){.guest-grid .person-photo{height:156px;aspect-ratio:auto;padding:0}}
+/* Square editorial portraits keep heads at a comparable scale across mixed source ratios. */
+.person-row .person-photo,.guest-grid .person-photo{aspect-ratio:1}
+.person-sunil .person-photo img{width:140%;top:0}
+@media(max-width:379px){.guest-grid .person-photo{height:156px;aspect-ratio:auto}}
+.story-chapter:first-child .chapter-photo>img{width:100%;left:0;object-fit:contain;transform:none!important}
+@media(min-width:900px) and (min-height:851px){.chapter-photo{height:210px}}
+@media(max-width:899px){.story-chapter .chapter-photo{height:auto;aspect-ratio:16/9}}

@@ -25,6 +25,7 @@ export function navigate(path:RoutePath){
  if(path!==location.pathname)history.pushState(null,'',path);
  dispatchEvent(new PopStateEvent('popstate'));
  scrollTo({top:0,behavior:'instant'});
+ requestAnimationFrame(()=>document.querySelector<HTMLElement>('main')?.focus({preventScroll:true}));
 }
 
 export function usePath(){

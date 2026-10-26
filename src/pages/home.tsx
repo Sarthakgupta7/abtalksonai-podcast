@@ -5,15 +5,15 @@ import {CoverButton,Kicker,usePlayer,youtube} from '../components/site';
 
 const byPortrait=(name:string)=>episodes.find(e=>e.portrait===name)!;
 export const latestGuests:{name:string;label:string;note:string;episode:Episode|null}[]=[
- {name:'pranav',label:'Pranav Pai',note:'Startups & investing',episode:byPortrait('pranav')},
- {name:'sunil',label:'Sunil Grover',note:'AI & venture capital',episode:episodes.find(e=>e.id==='m19dviOKDbk')!},
+ {name:'pranav',label:'Pranav Pai',note:'Managing Partner & CIO, 3one4 Capital',episode:byPortrait('pranav')},
+ {name:'sunil',label:'Sunil Grover',note:'Managing Partner, G2C Ventures',episode:episodes.find(e=>e.id==='m19dviOKDbk')!},
  {name:'anil',label:'Anil Bajpai',note:'Your host',episode:null},
- {name:'navisha',label:'Navisha Prabhakar',note:'Careers, leadership & AI',episode:byPortrait('navisha')},
- {name:'malpani',label:'Aniruddha Malpani',note:'Healthcare & education',episode:byPortrait('malpani')},
+ {name:'navisha',label:'Navisha Prabhakar',note:'Regional Head, Google',episode:byPortrait('navisha')},
+ {name:'malpani',label:'Aniruddha Malpani',note:'Founder & Angel Investor, Malpani Ventures',episode:byPortrait('malpani')},
 ];
 
 export function PersonCard({name,label,note,onOpen,actionLabel}:{name:string;label:string;note:string;onOpen:()=>void;actionLabel:string}){
- return <button className={`person-card ${name==='anil'?'is-host':''}`} onClick={onOpen} aria-label={actionLabel}><span className="person-photo"><img src={portraitSrc(name)} alt="" loading="lazy"/></span><span className="person-text"><strong>{label}</strong><small>{note}</small></span></button>;
+ return <button className={`person-card person-${name} ${name==='anil'?'is-host':''}`} onClick={onOpen} aria-label={actionLabel}><span className="person-photo"><img src={portraitSrc(name)} alt="" loading="lazy"/></span><span className="person-text"><strong>{label}</strong><small>{note}</small></span></button>;
 }
 
 export function HomePage(){
@@ -24,7 +24,7 @@ export function HomePage(){
    <div className="page-wrap home-hero-inner"><div className="hero-copy">
     <Kicker>The conversation starts here</Kicker>
     <h1 id="home-title">Ideas worth<br/>talking about.</h1>
-    <p className="home-hero-lede">Real people. Bold ideas. New perspectives.</p>
+    <p className="home-hero-lede">AI, work and the people shaping what comes next. A podcast with Anil Bajpai.</p>
     <div className="hero-actions"><button className="btn btn-gold btn-lg" onClick={()=>play(featured)}><Play size={15} fill="currentColor"/> Watch latest episode</button><a className="btn btn-quiet btn-gold-text" href={youtube} target="_blank" rel="noopener"><Youtube size={18}/> YouTube <ArrowUpRight size={15}/></a></div>
    </div></div>
   </section>
@@ -40,7 +40,7 @@ export function HomePage(){
   </section>
 
   <section className="latest page-wrap" aria-labelledby="latest-title">
-   <div className="section-head"><div><Kicker>Recent guests</Kicker><h2 id="latest-title">Latest conversations</h2></div></div>
+   <div className="section-head"><div><Kicker>Featured voices</Kicker><h2 id="latest-title">People behind the conversations</h2></div></div>
    <div className="person-row">{latestGuests.map(g=><PersonCard key={g.name} {...g} actionLabel={g.episode?`${g.episode.audioUrl?'Listen to':'Watch'} the conversation with ${g.label}`:'Meet host Anil Bajpai'} onOpen={()=>g.episode?play(g.episode):navigate('/meet-anil')}/>)}</div>
   </section>
 

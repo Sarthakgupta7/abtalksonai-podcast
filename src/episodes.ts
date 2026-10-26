@@ -1,4 +1,6 @@
-export type Episode={id:string;guest:string;title:string;topic:string;duration:string;summary:string;terms:string;portrait?:string;audioUrl?:string;episodeUrl?:string};
+import archive from './archive.json';
+
+export type Episode={id:string;guest:string;title:string;topic:string;duration:string;summary:string;terms:string;portrait?:string;audioUrl?:string;episodeUrl?:string;sourceUrl?:string;external?:boolean;publishedAt?:string};
 const catalogue:Episode[]=[
 {id:'tDbW1XodB-o',guest:'Vijay Srinivas Agneeswaran',title:'AI vs human intelligence: will AI kill coding jobs?',topic:'AI & work',duration:'31 min',summary:"Vijay, Senior Director of AI R&D at Microsoft, joins Anil to explore AI agents, AGI, coding careers, research and India's role in building AI.",terms:'microsoft agents agi llms rag developers coding research india education'},
 {id:'m19dviOKDbk',guest:'Sunil Grover',title:'The next billion-dollar startup: AI, healthcare & venture capital',topic:'Startups',duration:'49 min',summary:'Sunil, Managing Partner at G2C Ventures, joins Anil to discuss AI startups, venture capital, healthcare innovation and what makes a compelling pitch.',terms:'g2c ventures venture capital funding healthcare pitch india ai startups'},
@@ -15,5 +17,8 @@ const navisha:Episode={"id": "navisha-google-microsoft", "guest": "Navisha Prabh
 export const latestEpisode=catalogue.find(e=>e.id==='tDbW1XodB-o')!;
 export const episodes=[latestEpisode,...catalogue.filter(e=>e.id==='m19dviOKDbk'||e.id==='R_eRsCIGCik'),...catalogue.filter(e=>![latestEpisode.id,'m19dviOKDbk','R_eRsCIGCik'].includes(e.id)),navisha];
 
+// Archive metadata comes from the official podcast RSS and verified guest directory.
+export const archiveEpisodes:Episode[]=[...episodes,...archive];
+
 export const portraitSrc=(name:string)=>name==='sunil'?'/assets/sunil-grover.webp':name==='anil'?'/assets/anil-bajpai.jpeg':`/assets/guests/${name}.jpg`;
-export const coverSrc=(e:Episode)=>e.audioUrl?portraitSrc(e.portrait!):`/assets/${e.id}.jpg`;
+export const coverSrc=(e:Episode)=>e.audioUrl?(e.portrait?portraitSrc(e.portrait):'/assets/archive-cover.svg'):`/assets/${e.id}.jpg`;
