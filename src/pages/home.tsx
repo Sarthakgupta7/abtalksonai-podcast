@@ -1,5 +1,6 @@
 import {ArrowRight,Play,ArrowUpRight,Youtube} from 'lucide-react';
 import {episodes,latestEpisode,portraitSrc,type Episode} from '../episodes';
+import {AdaptiveCopy,MobileSummary} from '../components/mobile-copy';
 import {Link,navigate} from '../router';
 import {CoverButton,Kicker,usePlayer,youtube} from '../components/site';
 
@@ -24,7 +25,7 @@ export function HomePage(){
    <div className="page-wrap home-hero-inner"><div className="hero-copy">
     <Kicker>The conversation starts here</Kicker>
     <h1 id="home-title">Ideas worth<br/>talking about.</h1>
-    <p className="home-hero-lede">AI, work and the people shaping what comes next. A podcast with Anil Bajpai.</p>
+    <p className="home-hero-lede"><AdaptiveCopy mobile="AI, work and careers with Anil Bajpai.">AI, work and the people shaping what comes next. A podcast with Anil Bajpai.</AdaptiveCopy></p>
     <div className="hero-actions"><button className="btn btn-gold btn-lg" onClick={()=>play(featured)}><Play size={15} fill="currentColor"/> Watch latest episode</button><a className="btn btn-quiet btn-gold-text" href={youtube} target="_blank" rel="noopener"><Youtube size={18}/> YouTube <ArrowUpRight size={15}/></a></div>
    </div></div>
   </section>
@@ -33,20 +34,20 @@ export function HomePage(){
    <div className="section-head"><Kicker>Latest episode</Kicker><Link to="/conversations" className="text-link">View all <ArrowUpRight size={16}/></Link></div>
    <div className="featured-grid">
     <CoverButton className="featured-cover" episode={featured} label={`Play the conversation with ${featured.guest}`}/>
-    <div className="featured-copy"><span className="featured-topic">{featured.topic} · {featured.duration}</span><h2 id="featured-title">{featured.title}</h2>
-     <p className="featured-byline">{featured.guest} × Anil Bajpai</p><p className="featured-summary">{featured.summary}</p>
+    <div className="featured-copy"><span className="featured-topic">{featured.topic} · {featured.duration}</span><h2 id="featured-title"><AdaptiveCopy mobile={featured.shortTitle||featured.title}>{featured.title}</AdaptiveCopy></h2>
+     <p className="featured-byline">{featured.guest} × Anil Bajpai</p><MobileSummary label="About this episode"><p className="featured-summary">{featured.summary}</p></MobileSummary>
      <button className="underline-link" onClick={()=>play(featured)}>{featured.audioUrl?'Listen to episode':'Watch episode'} <ArrowUpRight size={16}/></button></div>
    </div>
   </section>
 
   <section className="latest page-wrap" aria-labelledby="latest-title">
-   <div className="section-head"><div><Kicker>Featured voices</Kicker><h2 id="latest-title">People behind the conversations</h2></div></div>
+   <div className="section-head"><div><Kicker>Featured voices</Kicker><h2 id="latest-title"><AdaptiveCopy mobile="Meet the voices">People behind the conversations</AdaptiveCopy></h2></div></div>
    <div className="person-row">{latestGuests.map(g=><PersonCard key={g.name} {...g} actionLabel={g.episode?`${g.episode.audioUrl?'Listen to':'Watch'} the conversation with ${g.label}`:'Meet host Anil Bajpai'} onOpen={()=>g.episode?play(g.episode):navigate('/meet-anil')}/>)}</div>
   </section>
 
   <section className="page-wrap ideas-section">
    <div className="ideas-banner"><div className="ideas-mosaic" aria-hidden="true">{episodes.filter(e=>!e.audioUrl).map(e=><img key={e.id} src={`/assets/${e.id}.jpg`} alt="" loading="lazy"/>)}</div>
-    <div className="ideas-copy"><h2>Every guest. Every idea.<br/>A deeper look at what’s next.</h2><Link to="/conversations" className="btn btn-outline">Explore all episodes <ArrowRight size={15}/></Link></div></div>
+    <div className="ideas-copy"><h2><AdaptiveCopy mobile="Find your next conversation.">Every guest. Every idea.<br/>A deeper look at what’s next.</AdaptiveCopy></h2><Link to="/conversations" className="btn btn-outline">Explore all episodes <ArrowRight size={15}/></Link></div></div>
   </section>
  </>;
 }

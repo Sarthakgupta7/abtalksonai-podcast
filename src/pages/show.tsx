@@ -1,5 +1,6 @@
 import {ArrowUpRight,Lightbulb,Mic,Play,Target,Users} from 'lucide-react';
 import {latestEpisode} from '../episodes';
+import {AdaptiveCopy} from '../components/mobile-copy';
 import {Link} from '../router';
 import {CoverButton,CtaBand,HostMedia,PageHero,Signature,youtube} from '../components/site';
 
@@ -18,7 +19,7 @@ export function ShowPage(){
  return <>
   <PageHero kicker="The show" title="Why ABTalksOnAI?" subtitle="AI is changing work. Let’s understand it together." media={<HostMedia/>}
    actions={<Link to="/conversations" className="btn btn-gold"><Play size={13} fill="currentColor"/> Watch the show</Link>}>
-   <p>Hosted by Anil Bajpai, ABTalksOnAI brings founders, investors and practitioners into conversations about AI, careers, leadership and the decisions behind their work.</p>
+   <p><AdaptiveCopy mobile="Anil Bajpai meets the people shaping AI, careers and leadership.">Hosted by Anil Bajpai, ABTalksOnAI brings founders, investors and practitioners into conversations about AI, careers, leadership and the decisions behind their work.</AdaptiveCopy></p>
   </PageHero>
 
   <section className="cream-section"><div className="page-wrap">

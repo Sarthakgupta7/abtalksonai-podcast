@@ -5,6 +5,7 @@ import {guestDirectory} from '../guests';
 import {StoryJourney,CampusWorkshop} from '../components/story-and-campus';
 import {CtaBand,HeroMedia,HostMedia,Kicker,PageHero,Signature,linkedin,usePlayer} from '../components/site';
 import {PersonCard} from './home';
+import {AdaptiveCopy,MobileSummary} from '../components/mobile-copy';
 import {SubscribeBand} from './show';
 
 const featuredGuests=[
@@ -22,7 +23,7 @@ const mosaicGuests=['amrish','pranav','vladimir','kathrin','manish','sunil','wal
 export function GuestsPage(){
  const {play,suggestGuest}=usePlayer();
  return <>
-  <PageHero kicker="Our guests" media={<HeroMedia className="hero-mosaic guest-mosaic">{mosaicGuests.map(name=><img key={name} src={portraitSrc(name)} alt=""/>)}</HeroMedia>} className="guests-hero" title={<>Meet the people<br/>behind the <em>ideas.</em></>}><p>Founders. Investors. Practitioners. Every voice brings a different perspective.</p></PageHero>
+  <PageHero kicker="Our guests" media={<HeroMedia className="hero-mosaic guest-mosaic">{mosaicGuests.map(name=><img key={name} src={portraitSrc(name)} alt=""/>)}</HeroMedia>} className="guests-hero" title={<>Meet the people<br/>behind the <em>ideas.</em></>}><p><AdaptiveCopy mobile="Founders, investors and AI practitioners.">Founders. Investors. Practitioners. Every voice brings a different perspective.</AdaptiveCopy></p></PageHero>
   <section className="page-wrap guests-page guests-search-first">
    <GuestDirectory/>
    <h2 className="featured-voices-heading">A few familiar voices</h2><div className="guest-grid">{featuredGuests.map(g=>{const episode=episodes.find(e=>g.name==='sunil'?e.id==='m19dviOKDbk':e.portrait===g.name)!;return <PersonCard key={g.name} {...g} actionLabel={`${episode.audioUrl?'Listen to':'Watch'} the conversation with ${g.label}`} onOpen={()=>play(episode)}/>})}</div>
@@ -35,9 +36,9 @@ export function HostPage(){
  const {play}=usePlayer();
  return <>
   <section className="page-hero host-page-hero" aria-labelledby="host-page-title">
-   <div className="host-page-heading"><Kicker>Meet the host</Kicker><h1 id="host-page-title">Anil Bajpai.<br/>Always <em>curious.</em></h1><p className="host-short-intro">Founder of ABTalksOnAI. Exploring AI, leadership and careers through thoughtful conversations.</p><a className="btn btn-gold host-intro-cta" href={linkedin} target="_blank" rel="noopener">Connect on LinkedIn <ArrowUpRight size={15}/></a></div>
+   <div className="host-page-heading"><Kicker>Meet the host</Kicker><h1 id="host-page-title">Anil Bajpai.<br/>Always <em>curious.</em></h1><p className="host-short-intro"><AdaptiveCopy mobile="Founder of ABTalksOnAI. Your host for conversations about AI and work.">Founder of ABTalksOnAI. Exploring AI, leadership and careers through thoughtful conversations.</AdaptiveCopy></p><a className="btn btn-gold host-intro-cta" href={linkedin} target="_blank" rel="noopener">Connect on LinkedIn <ArrowUpRight size={15}/></a></div>
    <HostMedia interactive/>
-   <div className="host-page-biography"><div className="hero-body"><p>Anil Bajpai is the founder of ABTalksOnAI and your host. He brings his experience in enterprise technology to conversations about AI, leadership and careers.</p><p>His curiosity connects big ideas with everyday decisions: how we work, what we build and where we go next. Every conversation is a chance to learn from someone who sees the world differently.</p></div>
+   <div className="host-page-biography"><MobileSummary label="More about Anil"><div className="hero-body"><p>Anil Bajpai is the founder of ABTalksOnAI and your host. He brings his experience in enterprise technology to conversations about AI, leadership and careers.</p><p>His curiosity connects big ideas with everyday decisions: how we work, what we build and where we go next. Every conversation is a chance to learn from someone who sees the world differently.</p></div></MobileSummary>
     <div className="hero-actions"><button className="btn btn-quiet" onClick={()=>play(latestEpisode)}><Play size={13} fill="currentColor"/> Watch the latest episode</button></div>
    </div>
   </section>
@@ -52,7 +53,7 @@ export function HostPage(){
 export function CampusPage(){
  return <>
   <PageHero className="campus-page-hero" kicker="Campus" media={<HeroMedia><img src="/assets/studio-hero.jpg" alt=""/></HeroMedia>} title={<>Beyond the microphone,<br/><em>into the classroom.</em></>} actions={<a className="btn btn-gold" href="mailto:team@abtalks.in?subject=Campus%20AI%20workshop%20enquiry">Plan a campus workshop <ArrowUpRight size={15}/></a>}>
-   <p>The questions raised on the podcast became a reason to build together: challenges, workshops and ViCodathon, connecting what industry needs with what students can do next.</p>
+   <p><AdaptiveCopy mobile="Practical AI workshops, challenges and ViCodathon for students.">The questions raised on the podcast became a reason to build together: challenges, workshops and ViCodathon, connecting what industry needs with what students can do next.</AdaptiveCopy></p>
   </PageHero>
   <StoryJourney/>
   <CampusWorkshop/>
