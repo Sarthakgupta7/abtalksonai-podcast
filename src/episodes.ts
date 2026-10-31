@@ -1,7 +1,8 @@
 import archive from './archive.json';
 
-export type Episode={id:string;guest:string;title:string;shortTitle?:string;topic:string;duration:string;summary:string;terms:string;portrait?:string;audioUrl?:string;episodeUrl?:string;sourceUrl?:string;external?:boolean;publishedAt?:string};
+export type Episode={id:string;guest:string;title:string;shortTitle?:string;topic:string;duration:string;summary:string;terms:string;portrait?:string;audioUrl?:string;episodeUrl?:string;sourceUrl?:string;external?:boolean;publishedAt?:string;thumbnailUrl?:string};
 const catalogue:Episode[]=[
+{id:'fYXAbtHbYuk',guest:'David Brown',title:'Why most AI startups fail: AI investing, Agentic AI & enterprise AI',shortTitle:'Why most AI startups fail',topic:'Startups',duration:'41 min',publishedAt:'2026-10-28T12:15:11Z',summary:'David Brown, AI Therapist and AI Investor, joins Anil to explore AI startup red flags, enterprise adoption, governance and what investors look for in founders.',terms:'david brown ai investor therapist startups enterprise agentic governance investing founder runway',sourceUrl:'https://www.youtube.com/watch?v=fYXAbtHbYuk'},
 {id:'tDbW1XodB-o',guest:'Vijay Srinivas Agneeswaran',title:'AI vs human intelligence: will AI kill coding jobs?',shortTitle:'Will AI kill coding jobs?',topic:'AI & work',duration:'31 min',summary:"Vijay, Senior Director of AI R&D at Microsoft, joins Anil to explore AI agents, AGI, coding careers, research and India's role in building AI.",terms:'microsoft agents agi llms rag developers coding research india education'},
 {id:'m19dviOKDbk',guest:'Sunil Grover',title:'The next billion-dollar startup: AI, healthcare & venture capital',topic:'Startups',duration:'49 min',summary:'Sunil, Managing Partner at G2C Ventures, joins Anil to discuss AI startups, venture capital, healthcare innovation and what makes a compelling pitch.',terms:'g2c ventures venture capital funding healthcare pitch india ai startups'},
 {id:'B2roTlSVjhI',guest:'Kevin Surace',title:'Why AI agents are your new employees',topic:'AI & work',duration:'39 min',summary:'Anil and Kevin explore AI agents, identity, code and the changing relationship between people and work.',terms:'identity automation cybersecurity agents',portrait:'kevin'},
@@ -14,11 +15,11 @@ const catalogue:Episode[]=[
 {id:'R_eRsCIGCik',guest:'Sqn Ldr (Retd.) Ankita Deswal',title:'Operation Sindoor, Rafale & AI in defence',topic:'Human stories',duration:'52 min',summary:'Ankita joins Anil to discuss Operation Sindoor, Rafale, AI in defence and the human experience behind a life in the Indian Air Force.',terms:'leadership air force military life operation sindoor rafale defence',portrait:'ankita'}];
 
 const navisha:Episode={"id": "navisha-google-microsoft", "guest": "Navisha Prabhakar", "title": "From Google to Microsoft: AI, Copilot & the future of work", "topic": "AI & work", "duration": "74 min", "summary": "Navisha and Anil explore careers in Big Tech, leadership, Microsoft Copilot, GenAI and the future of work.", "terms": "google microsoft copilot big tech careers leadership genai", "portrait": "navisha", "audioUrl": "https://anchor.fm/s/10a76dd14/podcast/play/109754387/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-9-16%2F409369201-44100-2-c51d622b5d236.mp3", "episodeUrl": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/From-Google-to-Microsoft-AI--Copilot--GenAI--Future-of-Work--Career--Big-Tech-Insights-e39juij"};
-export const latestEpisode=catalogue.find(e=>e.id==='tDbW1XodB-o')!;
-export const episodes=[latestEpisode,...catalogue.filter(e=>e.id==='m19dviOKDbk'||e.id==='R_eRsCIGCik'),...catalogue.filter(e=>![latestEpisode.id,'m19dviOKDbk','R_eRsCIGCik'].includes(e.id)),navisha];
+export const latestEpisode=catalogue.find(e=>e.id==='fYXAbtHbYuk')!;
+export const episodes=[latestEpisode,...catalogue.filter(e=>e.id==='tDbW1XodB-o'||e.id==='m19dviOKDbk'||e.id==='R_eRsCIGCik'),...catalogue.filter(e=>![latestEpisode.id,'tDbW1XodB-o','m19dviOKDbk','R_eRsCIGCik'].includes(e.id)),navisha];
 
 // Archive metadata comes from the official podcast RSS and verified guest directory.
 export const archiveEpisodes:Episode[]=[...episodes,...archive];
 
 export const portraitSrc=(name:string)=>name==='sunil'?'/assets/sunil-grover.webp':name==='anil'?'/assets/anil-bajpai.jpeg':`/assets/guests/${name}.jpg`;
-export const coverSrc=(e:Episode)=>e.audioUrl?(e.portrait?portraitSrc(e.portrait):'/assets/archive-cover.svg'):`/assets/${e.id}.jpg`;
+export const coverSrc=(e:Episode)=>e.thumbnailUrl||(e.audioUrl?(e.portrait?portraitSrc(e.portrait):'/assets/archive-cover.svg'):`/assets/${e.id}.jpg`);

@@ -68,5 +68,10 @@
       "source": "/editorial/:path*",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "functions": {
+    "api/episodes.ts": {
+      "maxDuration": 30
+    }
+  }
 }

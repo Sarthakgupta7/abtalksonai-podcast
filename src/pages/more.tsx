@@ -1,5 +1,6 @@
 import {ArrowUpRight,Play} from 'lucide-react';
-import {episodes,latestEpisode,portraitSrc} from '../episodes';
+import {episodes,portraitSrc} from '../episodes';
+import {useEpisodeCatalogue} from '../episode-feed';
 import {GuestDirectory} from '../components/guest-directory';
 import {guestDirectory} from '../guests';
 import {StoryJourney,CampusWorkshop} from '../components/story-and-campus';
@@ -33,6 +34,7 @@ export function GuestsPage(){
 }
 
 export function HostPage(){
+ const {latestEpisode}=useEpisodeCatalogue();
  const {play}=usePlayer();
  return <>
   <section className="page-hero host-page-hero" aria-labelledby="host-page-title">

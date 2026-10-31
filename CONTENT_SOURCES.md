@@ -34,3 +34,9 @@ Visual reference: user-supplied ABTalksOnAI-Website.zip. Integrated its six-page
 - The five additional YouTube conversations use official video IDs and official `i.ytimg.com` thumbnails. Entries without verified runtimes omit that field rather than estimating it.
 - Archived audio uses labelled ABTalksOnAI artwork rather than an invented guest portrait. No chapters or timestamps were fabricated.
 - Existing host/guest photographs retain their source content. Portrait alignment is CSS framing only.
+
+## Live episode sync and David Brown, 31 October 2026
+
+- Official channel confirmed as `UCX-iRWp3bgD_lBAwhNGM3gw`: https://www.youtube.com/@ABTalksOnAI/videos . Public channel feed: https://www.youtube.com/feeds/videos.xml?channel_id=UCX-iRWp3bgD_lBAwhNGM3gw . Only the channel's selected Videos tab supplies candidates; video duration and release state are checked before inclusion.
+- David Brown: https://www.youtube.com/watch?v=fYXAbtHbYuk . Official title: “Why Most AI Startups Fail: AI Investing, Agentic AI & Enterprise AI | David Brown”. Duration 2,432 seconds; published 28 October 2026. His AI Therapist and AI Investor descriptions are channel-reported. No guest photograph, employer or additional credentials were invented.
+- Runtime and CDN caching follow https://vercel.com/docs/functions/functions-api-reference/vercel-functions-package and https://vercel.com/docs/caching/cache-control-headers . Refreshes are visitor-driven, not an always-running background job.

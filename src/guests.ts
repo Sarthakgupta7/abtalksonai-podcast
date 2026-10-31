@@ -132,6 +132,10 @@ export const guestDirectory: Guest[] = [
     ]
   },
   {
+    "name": "David Brown",
+    "conversations": [{"title": "Why Most AI Startups Fail: AI Investing, Agentic AI & Enterprise AI", "url": "https://www.youtube.com/watch?v=fYXAbtHbYuk", "source": "https://www.youtube.com/watch?v=fYXAbtHbYuk"}]
+  },
+  {
     "name": "David Ross",
     "conversations": [
       {

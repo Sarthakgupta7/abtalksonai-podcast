@@ -1,6 +1,7 @@
 import {ArrowRight,Play,ArrowUpRight,Youtube} from 'lucide-react';
-import {episodes,latestEpisode,portraitSrc,type Episode} from '../episodes';
+import {episodes,coverSrc,portraitSrc,type Episode} from '../episodes';
 import {AdaptiveCopy,MobileSummary} from '../components/mobile-copy';
+import {useEpisodeCatalogue} from '../episode-feed';
 import {Link,navigate} from '../router';
 import {CoverButton,Kicker,usePlayer,youtube} from '../components/site';
 
@@ -18,7 +19,7 @@ export function PersonCard({name,label,note,onOpen,actionLabel}:{name:string;lab
 }
 
 export function HomePage(){
- const {play}=usePlayer();const featured=latestEpisode;
+ const {play}=usePlayer();const {latestEpisode,episodes}=useEpisodeCatalogue();const featured=latestEpisode;
  return <>
   <section className="home-hero" aria-labelledby="home-title">
    <div className="home-hero-media" aria-hidden="true"><img src="/assets/studio-hero.jpg" alt=""/></div>
@@ -33,9 +34,9 @@ export function HomePage(){
   <section className="featured page-wrap" id="latest" aria-labelledby="featured-title">
    <div className="section-head"><Kicker>Latest episode</Kicker><Link to="/conversations" className="text-link">View all <ArrowUpRight size={16}/></Link></div>
    <div className="featured-grid">
-    <CoverButton className="featured-cover" episode={featured} label={`Play the conversation with ${featured.guest}`}/>
+    <CoverButton className="featured-cover" episode={featured} label={featured.guest?`Play the conversation with ${featured.guest}`:`Play ${featured.title}`}/>
     <div className="featured-copy"><span className="featured-topic">{featured.topic} · {featured.duration}</span><h2 id="featured-title"><AdaptiveCopy mobile={featured.shortTitle||featured.title}>{featured.title}</AdaptiveCopy></h2>
-     <p className="featured-byline">{featured.guest} × Anil Bajpai</p><MobileSummary label="About this episode"><p className="featured-summary">{featured.summary}</p></MobileSummary>
+     <p className="featured-byline">{featured.guest?`${featured.guest} × Anil Bajpai`:'With Anil Bajpai'}</p><MobileSummary label="About this episode"><p className="featured-summary">{featured.summary}</p></MobileSummary>
      <button className="underline-link" onClick={()=>play(featured)}>{featured.audioUrl?'Listen to episode':'Watch episode'} <ArrowUpRight size={16}/></button></div>
    </div>
   </section>
@@ -46,7 +47,7 @@ export function HomePage(){
   </section>
 
   <section className="page-wrap ideas-section">
-   <div className="ideas-banner"><div className="ideas-mosaic" aria-hidden="true">{episodes.filter(e=>!e.audioUrl).map(e=><img key={e.id} src={`/assets/${e.id}.jpg`} alt="" loading="lazy"/>)}</div>
+   <div className="ideas-banner"><div className="ideas-mosaic" aria-hidden="true">{episodes.filter(e=>!e.audioUrl).map(e=><img key={e.id} src={coverSrc(e)} alt="" loading="lazy"/>)}</div>
     <div className="ideas-copy"><h2><AdaptiveCopy mobile="Find your next conversation.">Every guest. Every idea.<br/>A deeper look at what’s next.</AdaptiveCopy></h2><Link to="/conversations" className="btn btn-outline">Explore all episodes <ArrowRight size={15}/></Link></div></div>
   </section>
  </>;

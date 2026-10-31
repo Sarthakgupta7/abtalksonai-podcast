@@ -1,11 +1,12 @@
 import {useState} from 'react';
 import {ArrowUpRight, Search, X} from 'lucide-react';
 import {guestDirectory} from '../guests';
-import {archiveEpisodes} from '../episodes';
+import {useEpisodeCatalogue} from '../episode-feed';
 import {usePlayer} from './site';
 
 export function GuestDirectory() {
   const {play}=usePlayer();
+  const {archiveEpisodes}=useEpisodeCatalogue();
   const [query, setQuery] = useState('');
   const [expanded, setExpanded] = useState(false);
   const filtered = guestDirectory.filter(g => `${g.name} ${g.conversations.map(c=>c.title).join(' ')}`.toLowerCase().includes(query.trim().toLowerCase()));

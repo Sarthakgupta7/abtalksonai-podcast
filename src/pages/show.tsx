@@ -1,5 +1,5 @@
 import {ArrowUpRight,Lightbulb,Mic,Play,Target,Users} from 'lucide-react';
-import {latestEpisode} from '../episodes';
+import {useEpisodeCatalogue} from '../episode-feed';
 import {AdaptiveCopy} from '../components/mobile-copy';
 import {Link} from '../router';
 import {CoverButton,CtaBand,HostMedia,PageHero,Signature,youtube} from '../components/site';
@@ -16,6 +16,7 @@ export function SubscribeBand(){
 }
 
 export function ShowPage(){
+ const {latestEpisode}=useEpisodeCatalogue();
  return <>
   <PageHero kicker="The show" title="Why ABTalksOnAI?" subtitle="AI is changing work. Let’s understand it together." media={<HostMedia/>}
    actions={<Link to="/conversations" className="btn btn-gold"><Play size={13} fill="currentColor"/> Watch the show</Link>}>
@@ -23,7 +24,7 @@ export function ShowPage(){
   </PageHero>
 
   <section className="cream-section"><div className="page-wrap">
-   <div className="quote-split"><CoverButton className="quote-media" episode={latestEpisode} label={`Play the conversation with ${latestEpisode.guest}`}/>
+   <div className="quote-split"><CoverButton className="quote-media" episode={latestEpisode} label={latestEpisode.guest?`Play the conversation with ${latestEpisode.guest}`:`Play ${latestEpisode.title}`}/>
     <blockquote className="pull-quote"><span className="quote-mark" aria-hidden="true">“</span><p>The best conversations happen when people listen with curiosity, not judgment.</p><footer><Signature/></footer></blockquote></div>
    <div className="pillars"><h2>What makes ABTalksOnAI different?</h2><ul>{pillars.map(({Icon,title,text})=><li key={title}><span className="pillar-icon"><Icon size={22} strokeWidth={1.5}/></span><h3>{title}</h3><p>{text}</p></li>)}</ul></div>
   </div></section>
