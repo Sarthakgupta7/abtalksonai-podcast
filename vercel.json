@@ -73,5 +73,11 @@
     "api/episodes.ts": {
       "maxDuration": 30
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/episodes",
+      "schedule": "30 18 * * *"
+    }
+  ]
 }

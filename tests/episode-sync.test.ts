@@ -58,3 +58,14 @@ test('the published archive contains video embeds only and excludes the deleted 
  for(const episode of entries){assert.match(episode.id,/^[\w-]{11}$/);assert.equal(episode.audioUrl,undefined);assert.ok(!episode.guest.includes('Amrish'))}
  const guests=await readFile(new URL('../src/guests.ts',import.meta.url),'utf8');assert.ok(!guests.includes('Amrish Kumar'));
 });
+
+test('nightly refresh uses midnight in India, rather than UTC or elapsed ten-minute intervals',async()=>{
+ const {checkedThisIndiaDay,millisecondsUntilNightlyRefresh}=await import('../src/episode-schedule.js');
+ assert.equal(checkedThisIndiaDay('2026-10-31T01:00:00Z',Date.parse('2026-10-31T18:29:00Z')),true);
+ assert.equal(checkedThisIndiaDay('2026-10-31T18:29:59Z',Date.parse('2026-10-31T18:30:00Z')),false);
+ assert.equal(millisecondsUntilNightlyRefresh(Date.parse('2026-10-31T18:29:00Z')),60_000);
+ assert.equal(millisecondsUntilNightlyRefresh(Date.parse('2026-10-31T18:30:00Z')),86_400_000);
+ assert.equal(millisecondsUntilNightlyRefresh(Date.parse('2026-10-31T18:31:00Z'),300_000),240_000);
+ const {readFile}=await import('node:fs/promises');const config=JSON.parse(await readFile(new URL('../vercel.json',import.meta.url),'utf8'));
+ assert.deepEqual(config.crons,[{path:'/api/episodes',schedule:'30 18 * * *'}]);
+});
