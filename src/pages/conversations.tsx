@@ -4,7 +4,7 @@ import {coverSrc} from '../episodes';
 import {useEpisodeCatalogue} from '../episode-feed';
 import {HeroMedia,Kicker,usePlayer} from '../components/site';
 
-const filters=[{value:'',label:'All'},{value:'Human stories',label:'Human stories'},{value:'AI & work',label:'AI & work'},{value:'Startups',label:'Startups & investing'},{value:'From the archive',label:'Audio & archive'},{value:'New releases',label:'New releases'}];
+const filters=[{value:'',label:'All'},{value:'Human stories',label:'Human stories'},{value:'AI & work',label:'AI & work'},{value:'Startups',label:'Startups & investing'},{value:'From the archive',label:'Archive'},{value:'New releases',label:'New releases'}];
 const sorts={latest:'Latest first',shortest:'Shortest first',longest:'Longest first'};
 const minutes=(duration:string)=>parseInt(duration,10)||0;
 export function ConversationsPage(){
@@ -19,7 +19,7 @@ export function ConversationsPage(){
  const reset=()=>{setTopic('');setQuery('');update('topic','');update('q','')};
  return <>
   <section className="page-hero library-hero"><HeroMedia className="hero-mosaic episode-mosaic">{archiveEpisodes.filter(e=>!e.audioUrl).slice(0,6).map(e=><img key={e.id} src={coverSrc(e)} alt=""/>)}</HeroMedia><div className="page-wrap hero-inner"><div className="hero-copy">
-   <Kicker>The conversations</Kicker><h1>Find your next conversation.</h1><div className="hero-body"><p>Explore the video and audio archive by guest, topic or question.</p></div>
+   <Kicker>The conversations</Kicker><h1>Find your next conversation.</h1><div className="hero-body"><p>Explore the video archive by guest, topic or question.</p></div>
    <form className="search-field" role="search" onSubmit={e=>{e.preventDefault();results.current?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'})}}><Search size={18}/><input type="search" value={query} onChange={e=>{setQuery(e.target.value);update('q',e.target.value)}} placeholder="Search guests, topics or keywords" aria-label="Search conversations"/>{query&&<button type="button" className="field-clear" onClick={()=>{setQuery('');update('q','')}} aria-label="Clear search"><X size={15}/></button>}<button type="submit" className="field-submit" aria-label="Show results"><ArrowUpRight size={17}/></button></form>
   </div></div></section>
   <section className="library page-wrap" aria-label="Episode library">

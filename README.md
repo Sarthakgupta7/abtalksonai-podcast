@@ -28,7 +28,7 @@ Legacy section links resolve to their corresponding pages. Platform URLs includi
 
 The deployed Vercel site reads `/api/episodes`. This checks the official ABTalksOnAI YouTube Videos tab and public feed on demand, with a ten-minute cache. Open browser tabs recheck every ten minutes and when becoming visible again. No YouTube API key or manual deployment is required for a new eligible upload to appear.
 
-Eligible uploads must have a known duration of at least ten minutes. Shorts, videos labelled as trailers/teasers/previews/highlights, live streams, upcoming premieres and future publication dates are excluded. A channel-identity check prevents unrelated videos from entering the catalogue. `server/youtube.ts` supports both current and older YouTube metadata formats.
+Eligible uploads must have a known duration of at least ten minutes. Shorts, videos labelled as trailers/teasers/previews/highlights, live streams, upcoming premieres and future publication dates are excluded. A channel-identity check prevents unrelated videos from entering the catalogue. `server/youtube.js` supports both current and older YouTube metadata formats.
 
 The homepage, episode archive, editorial view and latest-episode buttons share the live catalogue. Verified guest names, designations, descriptions and portraits take precedence over automatic metadata. New guest identities and companies are not guessed. Add verified details to `src/episodes.ts` and `src/guests.ts` as needed.
 

@@ -15,10 +15,10 @@ const pages={'/':HomePage,'/the-show':ShowPage,'/conversations':ConversationsPag
 function PodcastApp(){
  const {archiveEpisodes}=useEpisodeCatalogue();
  const path=usePath();const Page=pages[path as keyof typeof pages];
- const[selected,setSelected]=useState<Episode|null>(()=>archiveEpisodes.find(e=>e.id===new URLSearchParams(location.search).get('episode'))||null);const[guestOpen,setGuestOpen]=useState(false);
+ const[selected,setSelected]=useState<Episode|null>(()=>archiveEpisodes.find(e=>e.id===new URLSearchParams(location.search).get('episode')||e.legacyIds?.includes(new URLSearchParams(location.search).get('episode')||''))||null);const[guestOpen,setGuestOpen]=useState(false);
  const player=useMemo(()=>({play:(episode:Episode)=>{const url=new URL(location.href);url.searchParams.set('episode',episode.id);history.replaceState(null,'',url);setSelected(episode)},suggestGuest:()=>setGuestOpen(true)}),[]);
  const closePlayer=()=>{const url=new URL(location.href);url.searchParams.delete('episode');history.replaceState(null,'',url);setSelected(null)};
- useEffect(()=>{const sync=()=>{const id=new URLSearchParams(location.search).get('episode');setSelected(current=>current?.id===id?current:archiveEpisodes.find(e=>e.id===id)||null)};sync();addEventListener('popstate',sync);return()=>removeEventListener('popstate',sync)},[archiveEpisodes]);
+ useEffect(()=>{const sync=()=>{const id=new URLSearchParams(location.search).get('episode');setSelected(current=>current?.id===id?current:archiveEpisodes.find(e=>e.id===id||e.legacyIds?.includes(id||''))||null)};sync();addEventListener('popstate',sync);return()=>removeEventListener('popstate',sync)},[archiveEpisodes]);
  useEffect(()=>{if(path==='/'&&location.hash==='#latest')document.getElementById('latest')?.scrollIntoView({block:'start',behavior:'instant'})},[path]);
  useEffect(()=>{const label=path==='/editorial'?'Editorial':routes.find(r=>r.path===path)!.label;document.title=path==='/'?'ABTalksOnAI | Conversations that change perspective':`${label} | ABTalksOnAI`},[path]);
  return <PlayerContext.Provider value={player}>

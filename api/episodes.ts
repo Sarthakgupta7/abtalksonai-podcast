@@ -1,6 +1,6 @@
 import type {IncomingMessage,ServerResponse} from 'node:http';
 import {getCache} from '@vercel/functions';
-import {CHANNEL_URL,loadChannelEpisodes} from '../server/youtube.ts';
+import {CHANNEL_URL,loadChannelEpisodes} from '../server/youtube.js';
 import type {EpisodeFeed} from '../src/live-types.ts';
 import seed from '../src/auto-episodes.json' with {type:'json'};
 

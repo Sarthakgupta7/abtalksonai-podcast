@@ -19,7 +19,7 @@ const featuredGuests=[
 ];
 
 // The hero mixes in guests who do not have a card below, so it does not repeat the grid.
-const mosaicGuests=['amrish','pranav','vladimir','kathrin','manish','sunil','walid','navisha'];
+const mosaicGuests=['kevin','pranav','vladimir','kathrin','manish','sunil','walid','navisha'];
 
 export function GuestsPage(){
  const {play,suggestGuest}=usePlayer();

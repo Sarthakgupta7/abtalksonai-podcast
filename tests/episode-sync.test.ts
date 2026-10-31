@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {getCache} from '@vercel/functions';
-import {CHANNEL_ID,CHANNEL_URL,parseChannelPage,parseFeedDates,enrichFromWatch,loadChannelEpisodes} from '../server/youtube.ts';
+import {CHANNEL_ID,CHANNEL_URL,parseChannelPage,parseFeedDates,enrichFromWatch,loadChannelEpisodes} from '../server/youtube.js';
 import {mergeEpisodes,validAutoEpisode} from '../src/episode-merge.ts';
 import handler from '../api/episodes.ts';
 
@@ -50,3 +50,11 @@ test('successful source refresh, fresh cache, and outage recovery use the same e
  await getCache().delete(cacheKey);const fallback=await request();assert.equal(fallback.headers['X-Episode-Sync'],'fallback');assert.ok(JSON.parse(fallback.body).episodes.length>0);
 });
 test('write requests are rejected',async()=>{assert.equal((await request('POST')).status,405)});
+
+test('the published archive contains video embeds only and excludes the deleted guest',async()=>{
+ const {readFile}=await import('node:fs/promises');
+ const entries=JSON.parse(await readFile(new URL('../src/archive.json',import.meta.url),'utf8'));
+ assert.ok(entries.length>30);
+ for(const episode of entries){assert.match(episode.id,/^[\w-]{11}$/);assert.equal(episode.audioUrl,undefined);assert.ok(!episode.guest.includes('Amrish'))}
+ const guests=await readFile(new URL('../src/guests.ts',import.meta.url),'utf8');assert.ok(!guests.includes('Amrish Kumar'));
+});

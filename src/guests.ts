@@ -12,22 +12,12 @@ export const guestDirectory: Guest[] = [
     ]
   },
   {
-    "name": "Amrish Kumar",
-    "conversations": [
-      {
-        "title": "Agentic AI In Healthcare",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Agentic-AI-In-Healthcare-e39ib24",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
-      }
-    ]
-  },
-  {
     "name": "Ananthanarayanan S",
     "conversations": [
       {
         "title": "From Intel to AI Startup: The Truth About Agentic AI, GCCs & India's AI Future",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/From-Intel-to-AI-Startup-The-Truth-About-Agentic-AI--GCCs--Indias-AI-Future-e3nqaj9",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=LYeJu_sA1JM",
+        "source": "https://www.youtube.com/watch?v=LYeJu_sA1JM"
       }
     ]
   },
@@ -36,8 +26,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "AI in Healthcare: Agentic AI, Value Creation & Future of Medicine |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI-in-Healthcare-Agentic-AI--Value-Creation--Future-of-Medicine--abtalks-e3da4j6",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=SCLlaj20i8U",
+        "source": "https://www.youtube.com/watch?v=SCLlaj20i8U"
       }
     ]
   },
@@ -46,8 +36,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "AI, Leadership & the Future of Work | Talent, Strategy & Building Tomorrow’s Workforce |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI--Leadership--the-Future-of-Work--Talent--Strategy--Building-Tomorrows-Workforce--abtalks-e3a58hm",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=48RdTRIxTwk",
+        "source": "https://www.youtube.com/watch?v=48RdTRIxTwk"
       }
     ]
   },
@@ -56,8 +46,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Meet the Next Evolution of AI |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Meet-the-Next-Evolution-of-AI--abtalks-e3co634",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=DKNVC6QcjfQ",
+        "source": "https://www.youtube.com/watch?v=DKNVC6QcjfQ"
       }
     ]
   },
@@ -76,8 +66,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Journey to Build AI Startup In Dubai",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Journey-to-Build-AI-Startup-In-Dubai-freshersjobs-agenticai-startuplife-e3j6ohr",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=39dyJuJBm4Q",
+        "source": "https://www.youtube.com/watch?v=39dyJuJBm4Q"
       }
     ]
   },
@@ -86,8 +76,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Will Agentic AI Replace Humans? Future of AI Agents in Next 5 Years",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Will-Agentic-AI-Replace-Humans--Future-of-AI-Agents-in-Next-5-Years-e3gii3i",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=g1NmvYdybho",
+        "source": "https://www.youtube.com/watch?v=g1NmvYdybho"
       }
     ]
   },
@@ -96,8 +86,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "AI, Architects & Cultural Shifts: Tech’s Future by 2030",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI--Architects--Cultural-Shifts-Techs-Future-by-2030-e39rmdl",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=B6pIxIZm_2A",
+        "source": "https://www.youtube.com/watch?v=B6pIxIZm_2A"
       }
     ]
   },
@@ -106,8 +96,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "AI Skills Every Student Needs in 2026 | What Students and Professionals Must Know",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI-Skills-Every-Student-Needs-in-2026--What-Students-and-Professionals-Must-Know-e3optaa",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=jZqR3_Vj4Fk",
+        "source": "https://www.youtube.com/watch?v=jZqR3_Vj4Fk"
       }
     ]
   },
@@ -116,8 +106,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "AI x Life Sciences: Startup Strategy, Data Readiness & the Future of Drug Discovery |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI-x-Life-Sciences-Startup-Strategy--Data-Readiness--the-Future-of-Drug-Discovery--abtalks-e3c24r1",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=hJJpezzr4oQ",
+        "source": "https://www.youtube.com/watch?v=hJJpezzr4oQ"
       }
     ]
   },
@@ -126,22 +116,28 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "How To Build A Career in AI? Generative AI, RAG and Agentic AI",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/How-To-Build-A-Career-in-AI--Generative-AI--RAG-and-Agentic-AI-e3hr1qb",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=_2UcKXHPOIk",
+        "source": "https://www.youtube.com/watch?v=_2UcKXHPOIk"
       }
     ]
   },
   {
     "name": "David Brown",
-    "conversations": [{"title": "Why Most AI Startups Fail: AI Investing, Agentic AI & Enterprise AI", "url": "https://www.youtube.com/watch?v=fYXAbtHbYuk", "source": "https://www.youtube.com/watch?v=fYXAbtHbYuk"}]
+    "conversations": [
+      {
+        "title": "Why Most AI Startups Fail: AI Investing, Agentic AI & Enterprise AI",
+        "url": "https://www.youtube.com/watch?v=fYXAbtHbYuk",
+        "source": "https://www.youtube.com/watch?v=fYXAbtHbYuk"
+      }
+    ]
   },
   {
     "name": "David Ross",
     "conversations": [
       {
         "title": "Agentic AI, The Future of Business, Transformation in Healthcare and Work | Podcast",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Agentic-AI--The-Future-of-Business--Transformation-in-Healthcare-and-Work--Podcast-e3ars8c",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=EF_gZS1_M_I",
+        "source": "https://www.youtube.com/watch?v=EF_gZS1_M_I"
       }
     ]
   },
@@ -150,8 +146,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Women Entrepreneurs in Dubai",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Women-Entrepreneurs-in-Dubai-agenticai-businessgrowth-startups-e3j6ong",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=iR0wqpFqMhE",
+        "source": "https://www.youtube.com/watch?v=iR0wqpFqMhE"
       }
     ]
   },
@@ -180,8 +176,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Agentic AI Systems and Autonomous Agents",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Agentic-AI-Systems-and-Autonomous-Agents-agenticai-podcast-e3hr1l4",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=_9HmcGqbtF0",
+        "source": "https://www.youtube.com/watch?v=_9HmcGqbtF0"
       }
     ]
   },
@@ -200,8 +196,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Why Enterprise Governance Fails (And How Practitioners Fix It) |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Why-Enterprise-Governance-Fails-And-How-Practitioners-Fix-It--abtalks-e3da51v",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=xIHCJr3nVRo",
+        "source": "https://www.youtube.com/watch?v=xIHCJr3nVRo"
       }
     ]
   },
@@ -240,8 +236,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "AI Engineer Roadmap, Tools, Agents & The Future of Jobs | AI Architect Podcast",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI-Engineer-Roadmap--Tools--Agents--The-Future-of-Jobs--AI-Architect-Podcast-e3da4hk",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=z8KwdaK108k",
+        "source": "https://www.youtube.com/watch?v=z8KwdaK108k"
       }
     ]
   },
@@ -250,8 +246,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "From Python to Prompt Engineering : How AI Is Shaping the Next Generation of Developers |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/From-Python-to-Prompt-Engineering--How-AI-Is-Shaping-the-Next-Generation-of-Developers--abtalks-e3b673u",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=9eJ9QOzVCzQ",
+        "source": "https://www.youtube.com/watch?v=9eJ9QOzVCzQ"
       }
     ]
   },
@@ -270,8 +266,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Startup Hurdles, GenAI & Business Transformation: Inside the Founder Journey",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Startup-Hurdles--GenAI--Business-Transformation-Inside-the-Founder-Journey-abtalks-e3c246h",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=QYO-UjvSuNM",
+        "source": "https://www.youtube.com/watch?v=QYO-UjvSuNM"
       }
     ]
   },
@@ -280,8 +276,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Infosys Is Transforming Into an AI Company | Senior VP Explains What's Coming Next",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Infosys-Is-Transforming-Into-an-AI-Company--Senior-VP-Explains-Whats-Coming-Next-e3nqah1",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=c670l6y7ksA",
+        "source": "https://www.youtube.com/watch?v=c670l6y7ksA"
       }
     ]
   },
@@ -290,8 +286,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "From Google to Microsoft: AI, Copilot, GenAI & Future of Work | Career & Big Tech Insights",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/From-Google-to-Microsoft-AI--Copilot--GenAI--Future-of-Work--Career--Big-Tech-Insights-e39juij",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=8hxy1D-lht8",
+        "source": "https://www.youtube.com/watch?v=8hxy1D-lht8"
       }
     ]
   },
@@ -300,13 +296,13 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "The New Rules of Work: GenAI, Productivity & Leadership, Work Culture | Part - 2/2 |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/The-New-Rules-of-Work-GenAI--Productivity--Leadership--Work-Culture--Part---22--abtalks-e3da47g",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=-UslVSo-BiI",
+        "source": "https://www.youtube.com/watch?v=-UslVSo-BiI"
       },
       {
         "title": "Not Just Engineering: Career Choices, AI Leadership & Corporate Reality | PART1/2",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Not-Just-Engineering-Career-Choices--AI-Leadership--Corporate-Reality--abtalks-PART12-e3co66c",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=UWD2CUte-qo",
+        "source": "https://www.youtube.com/watch?v=UWD2CUte-qo"
       }
     ]
   },
@@ -315,8 +311,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "What Coca-Cola, GenAI & Agentic Commerce Reveal About the Future of Brands |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/What-Coca-Cola--GenAI--Agentic-Commerce-Reveal-About-the-Future-of-Brands--abtalks-e3ea6ec",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=joPm-w5VBGg",
+        "source": "https://www.youtube.com/watch?v=joPm-w5VBGg"
       }
     ]
   },
@@ -335,8 +331,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "AI and India’s Tech Revolution: How Developers Can Win the Future | GenAI Podcast 2025",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI-and-Indias-Tech-Revolution-How-Developers-Can-Win-the-Future--GenAI-Podcast-2025-e3da4fd",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=rp87zhFJZgU",
+        "source": "https://www.youtube.com/watch?v=rp87zhFJZgU"
       }
     ]
   },
@@ -345,8 +341,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "90% of AI Projects FAIL! | ChatGPT, Claude, LLMs & AI Startups",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/90-of-AI-Projects-FAIL---ChatGPT--Claude--LLMs--AI-Startups-e3nqaln",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=bt_qiMY3zvs",
+        "source": "https://www.youtube.com/watch?v=bt_qiMY3zvs"
       }
     ]
   },
@@ -355,8 +351,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "AI in Hiring & The Future of Talent Acquisition | Ramit Tyagi x Anil Bajpai | Podcast",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/AI-in-Hiring--The-Future-of-Talent-Acquisition--Ramit-Tyagi-x-Anil-Bajpai--Podcast-e3aj6kj",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=Tr4GdaRenCA",
+        "source": "https://www.youtube.com/watch?v=Tr4GdaRenCA"
       }
     ]
   },
@@ -365,8 +361,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Future of Jobs in Dubai 🤯 Agentic AI & SmartBricks Startup Story",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Future-of-Jobs-in-Dubai--Agentic-AI--SmartBricks-Startup-Story-job-agenticai-e3j6old",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=kQyaFak-iWw",
+        "source": "https://www.youtube.com/watch?v=kQyaFak-iWw"
       }
     ]
   },
@@ -375,8 +371,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "How to Build a Career in the Age of AI | Agentic AI, MBA & Success Secrets",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/How-to-Build-a-Career-in-the-Age-of-AI--Agentic-AI--MBA--Success-Secrets-e3nqaat",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=Wtr2BVEFfrI",
+        "source": "https://www.youtube.com/watch?v=Wtr2BVEFfrI"
       }
     ]
   },
@@ -385,8 +381,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "The Truth About Studying in USA in 2026 | Masters, Jobs, Immigration",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/The-Truth-About-Studying-in-USA-in-2026--Masters--Jobs--Immigration-e3kbdqs",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=qCRBzhVTlyw",
+        "source": "https://www.youtube.com/watch?v=qCRBzhVTlyw"
       }
     ]
   },
@@ -415,8 +411,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Claude AI vs ChatGPT: The Real Future of AI Jobs Nobody Talks About",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Claude-AI-vs-ChatGPT-The-Real-Future-of-AI-Jobs-Nobody-Talks-About-e3nqa86",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=FtHy58fmi8E",
+        "source": "https://www.youtube.com/watch?v=FtHy58fmi8E"
       }
     ]
   },
@@ -425,8 +421,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Will AI Replace Jobs? The Truth About Agentic AI, Physical AI & The Future of Careers",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Will-AI-Replace-Jobs--The-Truth-About-Agentic-AI--Physical-AI--The-Future-of-Careers-e3nqadj",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=D84DbQVZjtY",
+        "source": "https://www.youtube.com/watch?v=D84DbQVZjtY"
       }
     ]
   },
@@ -445,8 +441,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Is AI Really Taking Our Jobs? | AI Leader Explains",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Is-AI-Really-Taking-Our-Jobs---AI-Leader-Explains-jobs-ai-e3nqaen",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=JYNslC2ND8g",
+        "source": "https://www.youtube.com/watch?v=JYNslC2ND8g"
       }
     ]
   },
@@ -455,8 +451,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Building Startups in the Age of AI",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Building-Startups-in-the-Age-of-AI-abtalks-e3ea6iq",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=TdJossQ4UXU",
+        "source": "https://www.youtube.com/watch?v=TdJossQ4UXU"
       }
     ]
   },
@@ -465,8 +461,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "What Freshers Must Know in 2026: Banking, Data & AI Careers |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/What-Freshers-Must-Know-in-2026-Banking--Data--AI-Careers--abtalks-e3ea6n7",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=YWlKyKwOavo",
+        "source": "https://www.youtube.com/watch?v=YWlKyKwOavo"
       }
     ]
   },
@@ -485,8 +481,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Is AI Dangerous?",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Is-AI-Dangerous--aitools-freshersjobs-e3j6or7",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=RR62CTuTWqI",
+        "source": "https://www.youtube.com/watch?v=RR62CTuTWqI"
       }
     ]
   },
@@ -495,8 +491,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "From McKinsey to AI Startup: The Real Story of Building in the Agentic AI Era",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/From-McKinsey-to-AI-Startup-The-Real-Story-of-Building-in-the-Agentic-AI-Era-e3gii60",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=Z8xub7Oc-sk",
+        "source": "https://www.youtube.com/watch?v=Z8xub7Oc-sk"
       }
     ]
   },
@@ -505,8 +501,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Why Anthropic Is Winning The Game? |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Why-Anthropic-Is-Winning-The-Game---Podcast-anthropic-abtalks-e3gii8n",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=51DNjTyDfso",
+        "source": "https://www.youtube.com/watch?v=51DNjTyDfso"
       }
     ]
   },
@@ -515,8 +511,8 @@ export const guestDirectory: Guest[] = [
     "conversations": [
       {
         "title": "Why Enterprise Governance Fails (And How Practitioners Fix It) |",
-        "url": "https://podcasters.spotify.com/pod/show/ab-talks0/episodes/Why-Enterprise-Governance-Fails-And-How-Practitioners-Fix-It--abtalks-e3da51v",
-        "source": "https://anchor.fm/s/10a76dd14/podcast/rss"
+        "url": "https://www.youtube.com/watch?v=xIHCJr3nVRo",
+        "source": "https://www.youtube.com/watch?v=xIHCJr3nVRo"
       }
     ]
   }
