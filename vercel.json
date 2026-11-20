@@ -2,43 +2,6 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "redirects": [
-    {
-      "source": "/dashboard",
-      "destination": "https://app.klymb.ai/dashboard",
-      "permanent": true
-    },
-    {
-      "source": "/claude-signup",
-      "destination": "https://app.klymb.ai/claude-signup",
-      "permanent": true
-    },
-    {
-      "source": "/verify/:path*",
-      "destination": "https://app.klymb.ai/verify/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/claim/:path*",
-      "destination": "https://app.klymb.ai/claim/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/r/:path*",
-      "destination": "https://app.klymb.ai/r/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/hackathon",
-      "destination": "https://app.klymb.ai/hackathon",
-      "permanent": true
-    },
-    {
-      "source": "/hackathon/:path*",
-      "destination": "https://app.klymb.ai/hackathon/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/the-show",

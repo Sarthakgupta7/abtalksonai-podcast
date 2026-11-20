@@ -52,7 +52,7 @@ export function SiteFooter(){
    <nav aria-label="Footer navigation">{routes.map(r=><Link key={r.path} to={r.path} aria-current={path===r.path?'page':undefined}>{r.label}</Link>)}</nav>
    <div className="footer-social"><a href={youtube} target="_blank" rel="noopener" aria-label="YouTube"><Youtube size={17}/></a><a href={linkedin} target="_blank" rel="noopener" aria-label="Anil Bajpai on LinkedIn"><Linkedin size={16}/></a><a href={instagram} target="_blank" rel="noopener" aria-label="Instagram"><Instagram size={16}/></a></div>
   </div>
-  <div className="footer-bottom"><span>© 2026 ABTalksOnAI. All rights reserved.</span><a href={apple} target="_blank" rel="noopener">Apple Podcasts <ArrowUpRight size={12}/></a><a href="https://app.klymb.ai/" target="_blank" rel="noopener">Explore the community <ArrowUpRight size={12}/></a><a href="mailto:abtalks.podcast@gmail.com">Get in touch <Mail size={12}/></a><span className="footer-credit">A podcast by <strong>ABTalksOnAI</strong></span></div>
+  <div className="footer-bottom"><span>© 2026 ABTalksOnAI. All rights reserved.</span><a href={apple} target="_blank" rel="noopener">Apple Podcasts <ArrowUpRight size={12}/></a><a href="mailto:abtalks.podcast@gmail.com">Get in touch <Mail size={12}/></a><span className="footer-credit">A podcast by <strong>ABTalksOnAI</strong></span></div>
  </div></footer>;
 }
 

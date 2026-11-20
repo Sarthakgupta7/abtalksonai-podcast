@@ -22,7 +22,7 @@ Deploy `dist/` as static output with the supplied Vercel configuration. The defa
 
 The website includes the current episode catalogue, 51 searchable guests, topic filters, duration sorting, video/audio dialogs, campus photography, a horizontal story, responsive layouts and reduced-motion support. Guest suggestions prepare an email draft for the visitor to send.
 
-Legacy section links resolve to their corresponding pages. Platform URLs including `/dashboard`, `/claude-signup`, `/verify`, `/claim`, `/r` and `/hackathon` redirect to app.klymb.ai.
+Legacy section links resolve to their corresponding pages. The podcast site has no external platform redirects.
 
 ### Automatic episode updates
 

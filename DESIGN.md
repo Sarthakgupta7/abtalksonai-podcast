@@ -25,7 +25,7 @@ The original logo in `public/assets/abtalksonai-logo.png` is the supplied artwor
 5. Guest portraits and searchable, expandable directory.
 6. Host introduction.
 7. Guest suggestion and microphone mascot.
-8. Follow links and platform link to `https://app.klymb.ai`.
+8. Follow podcast links and campus workshop contact links.
 
 The episode archive uses compact media rows. The guest directory records verified public guests, with provenance in `GUEST_SOURCES.md`; do not describe it as a complete list of unpublished guests.
 
@@ -83,7 +83,7 @@ The latest episode uses ThreeUI Community's circular glass play button, adapted 
 Entrance reveals use a short 65ms ladder across episode rows and guest cards, capped at 195ms. IntersectionObserver reveals each item once; keyboard focus reveals content immediately. Desktop pointers add moving champagne highlights, a 3px maximum magnetic button offset, guest perspective and a featured-cover lift. Parallax uses a damped spring. Touch layouts use shorter 14px entrances and press feedback. Reduced motion makes all entrance content visible and disables spatial effects. No extra animation dependency is introduced.
 
 ## Story and campus content
-The story uses a four-chapter horizontal rail driven by vertical scroll on screens at least 900px wide. Decorative numbers and orbit lines move at different speeds to create horizontal parallax. Smaller screens use native swipe and scroll snap; reduced motion uses a static grid. The story is grounded in pages 3 to 5 of the supplied story PDF. The campus section paraphrases the workshop invitation's outcomes, 60 to 90 minute format and team contact. Community counts, hiring totals, employer titles and superlative growth claims are intentionally omitted because they are unverified or inconsistent across the documents. Historical abtalks.in platform links are updated to app.klymb.ai.
+The story uses a four-chapter horizontal rail driven by vertical scroll on screens at least 900px wide. Decorative numbers and orbit lines move at different speeds to create horizontal parallax. Smaller screens use native swipe and scroll snap; reduced motion uses a static grid. The story is grounded in pages 3 to 5 of the supplied story PDF. The campus section paraphrases the workshop invitation's outcomes, 60 to 90 minute format and team contact. Community counts, hiring totals, employer titles and superlative growth claims are intentionally omitted because they are unverified or inconsistent across the documents.
 
 ## Editorial polish, 15 October 2026
 Host portrait is a native toggle button, with monochrome and colour layers and a 650ms reveal on desktop hover or keyboard focus. On touch, tapping toggles colour. Only the main host portrait receives this treatment. Portrait framing keeps the face visible; name and identity sit below it. Host headings use a serif name and a compact sans-serif second line, with 15px desktop and 16px phone body copy. Four direct chapter buttons supplement the story's scroll interaction and show the current chapter.
